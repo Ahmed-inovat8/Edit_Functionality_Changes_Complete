@@ -50,6 +50,5 @@ US9 Checking the Back and Next Functionalities Via Database
     Navigate to the Category "State" from Bezzomate
     Navigate to the Category "MEA" in State
     Verify value "DCResults (DCResults)" on position "5" for Step "CurrentStep" via scrolls "2"
-    Unaccess Bezzomate
     
     [Teardown]    Close all Tests for Sora Fuel
