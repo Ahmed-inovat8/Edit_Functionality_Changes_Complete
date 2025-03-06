@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-03-04T15:05:16.805044" rpa="false" schemaversion="5">
+<suite id="s1" name="SF US12" source="C:\Users\DELL\Desktop\Inovat8-Project-main\tests\SF_US12.robot">
+<test id="s1-t1" name="US12 Verifying File Names for Completed Process from Results Page" line="7">
+<kw name="Login to Sora Fuel" owner="medium_level_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:05:17.421303" level="INFO">Opening browser 'chrome' to base url 'https://sorafuel.inovat8.com/'.</msg>
+<arg>https://sorafuel.inovat8.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-04T15:05:17.421041" elapsed="30.419732"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-04T15:05:47.841149" elapsed="0.048447"/>
+</kw>
+<kw name="Click On Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-04T15:05:47.902580" level="INFO">${composed} = //div/label[text() = "Username"]/following-sibling::div/input</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-04T15:05:47.900707" elapsed="0.001960"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-04T15:05:47.926107" elapsed="2.064788"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-04T15:05:47.925658" elapsed="2.065438"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:05:49.991728" level="INFO">Clicking element '//div/label[text() = "Username"]/following-sibling::div/input'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:05:49.991421" elapsed="0.173165"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:05:47.910861" elapsed="2.253996"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-03-04T15:05:50.164988" elapsed="0.000089"/>
+</return>
+<arg>${login_credenetials}</arg>
+<arg>Username</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-03-04T15:05:47.899001" elapsed="2.266264"/>
+</kw>
+<kw name="Send Keys to Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-04T15:05:50.175720" level="INFO">${composed} = //div/label[text() = "Username"]/following-sibling::div/input</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${element_required_to_compose}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.175041" elapsed="0.000791"/>
+</kw>
+<kw name="Send Keys To Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.203779" elapsed="0.078276"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.202282" elapsed="0.080184"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.283621" elapsed="0.067996"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:05:50.353259" level="INFO">Sending key(s) ('Ahmed',) to //div/label[text() = "Username"]/following-sibling::div/input element.</msg>
+<msg time="2025-03-04T15:05:50.645220" level="INFO">Sending keys Ahmed</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.352083" elapsed="0.332135"/>
+</kw>
+<arg>${composed}</arg>
+<arg>${text_to_enter}</arg>
+<tag>DONE</tag>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.184398" elapsed="0.500192"/>
+</kw>
+<arg>${login_credenetials}</arg>
+<arg>Username</arg>
+<arg>Ahmed</arg>
+<tag>DONE</tag>
+<doc>Enter input in the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.173699" elapsed="0.511429"/>
+</kw>
+<kw name="Click On Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-04T15:05:50.695143" level="INFO">${composed} = //div/label[text() = "Password"]/following-sibling::div/input</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.694649" elapsed="0.000565"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.722885" elapsed="0.030821"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.722045" elapsed="0.031888"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:05:50.754765" level="INFO">Clicking element '//div/label[text() = "Password"]/following-sibling::div/input'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.754303" elapsed="0.083758"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.704142" elapsed="0.134161"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-03-04T15:05:50.838449" elapsed="0.000106"/>
+</return>
+<arg>${login_credenetials}</arg>
+<arg>Password</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.693900" elapsed="0.144936"/>
+</kw>
+<kw name="Send Keys to Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-04T15:05:50.853576" level="INFO">${composed} = //div/label[text() = "Password"]/following-sibling::div/input</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${element_required_to_compose}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.852222" elapsed="0.001474"/>
+</kw>
+<kw name="Send Keys To Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.878517" elapsed="0.035131"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.877640" elapsed="0.036231"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.914595" elapsed="0.091683"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:05:51.007252" level="INFO">Sending key(s) ('Ahmed@123',) to //div/label[text() = "Password"]/following-sibling::div/input element.</msg>
+<msg time="2025-03-04T15:05:51.294845" level="INFO">Sending keys Ahmed@123</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-04T15:05:51.006588" elapsed="0.351871"/>
+</kw>
+<arg>${composed}</arg>
+<arg>${text_to_enter}</arg>
+<tag>DONE</tag>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.861960" elapsed="0.496624"/>
+</kw>
+<arg>${login_credenetials}</arg>
+<arg>Password</arg>
+<arg>Ahmed@123</arg>
+<tag>DONE</tag>
+<doc>Enter input in the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-03-04T15:05:50.851094" elapsed="0.507576"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:05:51.483849" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-140.png"&gt;&lt;img src="selenium-screenshot-140.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-04T15:05:51.358866" elapsed="0.125176"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-04T15:05:51.495760" elapsed="0.021135"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-04T15:05:51.495314" elapsed="0.021720"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:05:51.517496" level="INFO">Clicking element '//button[text() = "Sign in"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:05:51.517269" elapsed="0.075234"/>
+</kw>
+<arg>${signin_button}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T15:05:51.488148" elapsed="0.104544"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-04T15:05:59.469009" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/2703e1f0fc9f95177c01da2360755210/screenshot</msg>
+<errors>
+<msg time="2025-03-04T15:05:59.469009" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/2703e1f0fc9f95177c01da2360755210/screenshot</msg>
+<msg time="2025-03-04T15:06:01.498205" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>
