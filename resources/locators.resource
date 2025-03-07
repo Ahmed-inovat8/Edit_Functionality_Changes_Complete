@@ -31,6 +31,7 @@ ${close_universal}     //button[@class = "close"]
 
 ${EXTENSION_PATH_MAIN}    C:/Users/laptop point/AppData/Local/Google/Chrome/User Data/Default/Extensions/nkbokoloejkhohjlickhfkjfmbmboaof/2.7.0_0
 ${EXTENSION_PATH_BRANCH}    C:/Users/DELL/AppData/Local/Google/Chrome/User Data/Default/Extensions/nkbokoloejkhohjlickhfkjfmbmboaof/2.7.0_0
+${EXTENSION_PATH_NEW}    C:/Users/AhmedMazhar/AppData/Local/Google/Chrome/User Data/Default/Extensions/nkbokoloejkhohjlickhfkjfmbmboaof/2.7.0_1
 ${horizontal_scroller}    //div[@class="mxbt-table-wrapper"]
 ${bezzomate_category}    //div[contains(text(), "%s")]
 ${bezzomate_owner}    //div[text() = "%s"]/parent::td
@@ -42,6 +43,7 @@ ${bezzomate_table_indexes}    //div[@class = "mxbt-table-wrapper"]
 ${association_component_catholyte_anolyte}    //div[@class = "mxbt-search-references"]//div[contains(text(), "owner")]/ancestor::div[@class = "mxbt-search-references"]//div[contains(text(), "Anolyte_Component")]//ancestor::div[@class = "mxbt-search-references"]//div[contains(text(), "Catholyte_Component")]
 ${bezzomate_instance_composed}    //div[contains(text(), "%s")]
 ${master_data_id}    //div[text() = "%s"]
+${experiment_id}    //div[contains(text(), "%s")]
 ${header_actions}    //div[contains(text(), "Actions")]
 ${search_option}    //div[contains(text(), "Search")]
 ${instance_bezzomate}    //div[@class = "mxbt-paging-position"]

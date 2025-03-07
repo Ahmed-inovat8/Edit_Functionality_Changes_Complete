@@ -18,7 +18,7 @@ Login to Sora Fuel while adding Bezzomate
 
     [Tags]    DONE
 
-    Open Browser    https://sorafuel.inovat8.com/    chrome    options=add_argument("--load-extension=${EXTENSION_PATH_BRANCH}")
+    Open Browser    https://sorafuel.inovat8.com/    chrome    options=add_argument("--load-extension=${EXTENSION_PATH_NEW}")
     Maximize Browser Window
     Click On Composed Locator    ${login_credenetials}    Username
     Send Keys to Composed Locator    ${login_credenetials}    Username    Ahmed
@@ -154,6 +154,42 @@ Verify that the new MEA for Category "${Master_Data}" has only one instance in t
     Scroll Element Into View    ${bezzomate_one_instance}
     Double Click Element    ${bezzomate_one_instance}
     Capture Page Screenshot
+
+  
+Verify that the new Experiment for Category "${MasterData}" has the ID "${E_ID}" in the database
+    [Documentation]    Verify that the new Experiment for Project has the ID in the database
+    ...
+    ...    == Description: ==
+    ...    Verify that the new Experiment for Project has the ID in the database
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+    Refresh Bezzomate
+    Wait For Locator    ${bezzomate_search_bar}
+    Scroll Element Into View    ${bezzomate_search_bar}
+    Double Click Element    ${bezzomate_search_bar}
+    Click On Locator    ${bezzomate_search_bar}
+    Sleep    2
+    Press Keys    NONE    CTRL+A
+    Press Keys    NONE    BACKSPACE
+    Send Keys To Locator    ${bezzomate_search_bar}    ${Master_Data}
+    Click On Composed Locator    ${bezzomate_search_result}    ${Master_Data}
+    Wait For Locator    ${instance_bezzomate}
+    Click On Locator    ${instance_bezzomate}
+    Scroll To End Of Page
+    Wait For Locator    ${header_actions}
+    Click On Locator    ${header_actions}
+    ${locator} =   Composed Locator    ${experiment_id}    ${E_ID}
+    Wait For Locator    ${locator}
+    Double Click Element    ${locator}
+    Capture Page Screenshot
+
+
+
+
 
   
 Verify that the new MEA for Category "${Master_Data}" has the ID "${ID}" in the database

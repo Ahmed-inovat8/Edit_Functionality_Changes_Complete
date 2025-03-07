@@ -5,7 +5,7 @@ Resource          ../resources/high_level_keywords.resource
 Resource    ../resources/db_keywords.resource
 
 *** Test Cases ***
-US6 US4 MEA to MEA Configuration to Master Data/ ID Verification
+US6 MEA to MEA Configuration to Master Data/ ID Verification
     Login to Sora Fuel while adding Bezzomate
     Create a New Project from Dashboard
     Enter all the credentials in New Project Page "Automation Test", "Testing via Robot Framework", "2/20/2025", "Ahmed"

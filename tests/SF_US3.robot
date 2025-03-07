@@ -8,8 +8,8 @@ US3 Creating Projects against Multiple Experiments
     Login to Sora Fuel
     Create a New Project from Dashboard
     Enter all the following credentials in New Project Page "Project against Experiments", "Automation Testing", "Ahmed"
-    Enter a New Project ID "3" from New Project Page and Save Changes
-    Navigate to the MEA Page for "P0003"
+    Enter a New Project ID "9" from New Project Page and Save Changes
+    Navigate to the MEA Page for "P0009"
     Initiate MEA
     Create Multiple Incremental Experiments "3" "1"
     Verify error for entering an experiment value already present "3"
