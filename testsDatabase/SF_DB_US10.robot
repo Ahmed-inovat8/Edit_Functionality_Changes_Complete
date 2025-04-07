@@ -34,14 +34,11 @@ US18 DC Power Readings after MEA Deletion
     Navigate to Upload GC Files tab
     Browse Drive for the Run: "FID Run : 1"
     Select File with "6" iterations from Google Drive
-    If error select file with "6" iterations again for DC Power Supply
     Browse Drive for the Run: "TCD Run :1"
     Select File with "7" iterations from Google Drive
-    Set Time as "50" from GC File Upload
-    If error select file with "6" iterations again for DC Power Supply
-    Browse Drive for the Run: "TCD Run :1"
-    Select File with "7" iterations from Google Drive
-    Set Time as "50" from GC File Upload
+    Set Time as "40" from GC File Upload
+    Save Changes from GC File Upload
+    If error select file with "6" and "7" iterations again for DC Power Supply with Time "40"
     Save Changes from GC File Upload
     Navigate to PStat EIS Page from GC Files Page
     Enter Label "P Stat Configuration" in PStat EIS Data

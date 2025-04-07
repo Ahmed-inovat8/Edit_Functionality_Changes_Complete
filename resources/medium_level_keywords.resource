@@ -1281,7 +1281,7 @@ Select File with "${number}" iterations from Google Drive
 
     [Tags]    DONE
 
-    # Sleep    3
+    Sleep    3
     Convert To Integer    ${number}
     FOR    ${index}    IN RANGE    ${number}
         Press Keys    NONE    ARROW_RIGHT
@@ -1989,6 +1989,7 @@ Verify Error "${Error}" being displayed for the Category "${Category}"
     Wait For Composed Locator    ${category_results_page}    ${Category}
     Click On Composed Locator    ${category_results_page}    ${Category}
     Wait For Composed Locator    ${category_error}    ${Error}
+    Capture Page Screenshot
     Wait For Composed Locator    ${category_results_page}    ${Category}
     Click On Composed Locator    ${category_results_page}    ${Category}
 
@@ -2008,6 +2009,7 @@ Verify Error "${Error}" being displayed for the Sub-Category EIS Results
     Click On Composed Locator    ${category_results_page}    Potentiostat Readings
     Click On Locator    ${sub_category_eis_results}
     Wait For Composed Locator    ${category_error}    ${Error}
+    Capture Page Screenshot
     Wait For Composed Locator    ${category_results_page}    Potentiostat Readings
     Click On Composed Locator    ${category_results_page}    Potentiostat Readings
 
@@ -2372,6 +2374,8 @@ Delete the File/Files for PS from the MEA Edit Page and upload a new File with I
     Add file again if error with "${Number}" iterations
     Wait For Composed Locator    ${save_instrument_universal}    Save PS
     Click On Composed Locator    ${save_instrument_universal}    Save PS
+    Wait For Locator    ${proceed_universal}
+    Click On Locator    ${proceed_universal}
     Capture Page Screenshot
 
 While Remembering Folder Delete the File/Files for EIS from the MEA Edit Page and upload a new File with Iterations "${Number}"
@@ -2415,6 +2419,8 @@ While Remembering Folder Delete the File/Files for LSV from the MEA Edit Page an
     Select File with "${Number}" iterations from Google Drive
     Wait For Composed Locator    ${save_instrument_universal}    Save LSV
     Click On Composed Locator    ${save_instrument_universal}    Save LSV
+    Wait For Locator    ${proceed_universal}
+    Click On Locator    ${proceed_universal}
     Wait For Locator    ${ok_universal}
     Click On Locator    ${ok_universal}
     Wait Until Element Is Not Visible    ${ok_universal}
@@ -2443,6 +2449,8 @@ While Remembering Folder Delete the File/Files for GC from the MEA Edit Page and
     If error select file with "${Number1}" and "${Number2}" iterations again for DC Power Supply with Time "40"
     Wait For Composed Locator    ${save_instrument_universal}    Save GC
     Click On Composed Locator    ${save_instrument_universal}    Save GC
+    Wait For Locator    ${proceed_universal}
+    Click On Locator    ${proceed_universal}
     Capture Page Screenshot
 
 Upload a new File for Intrument PS with Iterations "${Number}"
@@ -2467,6 +2475,8 @@ Upload a new File for Intrument PS with Iterations "${Number}"
     Add file again if error with "${Number}" iterations
     Wait For Composed Locator    ${save_instrument_universal}    Save PS
     Click On Composed Locator    ${save_instrument_universal}    Save PS
+    Wait For Locator    ${proceed_universal}
+    Click On Locator    ${proceed_universal}
     Capture Page Screenshot
 
 For Instrument EIS While Remembering Folder upload a new File with Iterations "${Number}"
@@ -2515,6 +2525,8 @@ For Instrument LSV While Remembering Folder upload a new File with Iterations "$
     Select File with "${Number}" iterations from Google Drive
     Wait For Composed Locator    ${save_instrument_universal}    Save LSV
     Click On Composed Locator    ${save_instrument_universal}    Save LSV
+    Wait For Locator    ${proceed_universal}
+    Click On Locator    ${proceed_universal}
     Wait For Locator    ${ok_universal}
     Click On Locator    ${ok_universal}
     Capture Page Screenshot
@@ -2546,6 +2558,8 @@ For Instrument GC While Remembering Folder upload a new File with Iterations "${
     If error select file with "${Number1}" and "${Number2}" iterations again for DC Power Supply with Time "40"
     Wait For Composed Locator    ${save_instrument_universal}    Save GC
     Click On Composed Locator    ${save_instrument_universal}    Save GC
+    Wait For Locator    ${proceed_universal}
+    Click On Locator    ${proceed_universal}
     Capture Page Screenshot
 
 

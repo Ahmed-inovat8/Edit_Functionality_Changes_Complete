@@ -65,4 +65,13 @@ US20 Testing MEA Edit Functionality, Deleting all Files, Verifying Deletion from
     For Instrument GC While Remembering Folder upload a new File with Iterations "6" "7"
     For Instrument EIS While Remembering Folder upload a new File with Iterations "4"
     For Instrument LSV While Remembering Folder upload a new File with Iterations "5"
+    Save and Close a Process from MEA Edit Page
+    Navigate to the View Results Functionality for the MEA "P0019-E0001-M0001" from MEA Dashboard Page
+    Verify File Name "PS.csv" being displayed for the Category "DC Power Supply Results"
+    Verify File Name "3-12-002_BoL-02_01_LSV_C01.mpt" being displayed for the Category "Potentiostat Readings"
+    Verify File Name "3-12-002_BoL-02_03_GEIS_C01.mpt" being displayed for the Category "Potentiostat Readings"
+    Verify File Name "TCD_3-3-018_B2_Trial2_Run2.pdf" being displayed for the Category "Gas Chromatography Results"
+    Verify File Name "FID_3-3-018_B2_Trial2_Run1.pdf" being displayed for the Category "Gas Chromatography Results"
+    Verify File Name "PS.csv" being displayed for the Category "Gas Chromatography Results"
+
     # [Teardown]    Close Test for Sora Fuel
