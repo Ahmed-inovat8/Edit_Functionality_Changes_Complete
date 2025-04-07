@@ -49,7 +49,6 @@ US18 DC Power Readings after MEA Deletion
     Select File with "5" iterations from Google Drive
     Save and Close a Process
     Navigate to the MEA Page for "P0009"
-    
     Access Bezzomate
     Navigate to the Category "State" from Bezzomate
 
