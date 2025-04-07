@@ -6,7 +6,7 @@ Resource          low_level_keywords.resource
 *** Keywords ***
 
 Wait For Locator
-    [Arguments]    ${locator}    ${timeout}=30
+    [Arguments]    ${locator}    ${timeout}=40
     [Documentation]    Verifies that element ``locator`` is found on the current page.
     ...
     ...    == Description: ==
@@ -22,7 +22,7 @@ Wait For Locator
     Wait Until Element Is Visible    ${locator}    timeout=${timeout}
 
 Wait For Composed Locator
-    [Arguments]    ${locator}    ${text}    ${timeout}=30
+    [Arguments]    ${locator}    ${text}    ${timeout}=50
     [Documentation]    Verifies that element ``composed`` locator is found on the current page.
     ...
     ...    == Description: ==

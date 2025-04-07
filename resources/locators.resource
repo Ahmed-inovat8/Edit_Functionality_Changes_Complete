@@ -20,6 +20,9 @@ ${delete_universal}     //button[text() = "Delete"]
 ${skip_universal}     //button[text() = "Skip"]
 ${loader_universal}     //div[@class= "mx-progress mx-progress-empty"]
 ${close_universal}     //button[@class = "close"]
+${edit_universal}     //button[text() = "Edit"]
+${delete_file_universal}     //button[text() = "Delete File"]
+${save_instrument_universal}     //button[text() = "%s"]
 
 
 
@@ -49,6 +52,8 @@ ${search_option}    //div[contains(text(), "Search")]
 ${instance_bezzomate}    //div[@class = "mxbt-paging-position"]
 ${test_step_index}    //div[@class = "mxbt-table"]//th[%s]//span[contains(text(), "%s")]
 ${test_value_index}    //div[@class = "mxbt-table"]//td[%s]/div[contains(text(), "%s")]
+${dc_readings}    //div[contains(text(), "%s")]
+
 
 
 
@@ -69,6 +74,7 @@ ${del_progress_msg}     //div[text() = "Deleting in progress... Please wait whil
 ${project_button}     //span[@class = "mx-icon-lined mx-icon-blocks"]
 ${project_id}     //span[text() = "%s"]
 ${master_data_navigation}     //a[text() = " Master Data"]
+${mea_dashboard_navigation}     //a[text() = " MEA"]
 ${system_configuration_icon}     //span[@class = "mx-icon-lined mx-icon-wrench"]
 ${system_configuration_option}     //a[@title = "%s"]
 
@@ -96,9 +102,6 @@ ${project_details_header}     //h2[contains(text(), "Project Details")]
 ${project_details_super_id}     //span[text() = "%s"]
 ${project_details_my_meas}     //a[text() = "My MEAs"]
 ${experiment_selection}     //span[text() = "%s"]/parent::div
-
-
-
 
 
 
@@ -145,6 +148,8 @@ ${testing_details}     //h1[text() = "Testing Details"]
 ${label_testing_details}     //label[text() = "%s"]
 ${anolyte_catholyte_noneditable_attributes}     //div[@class= "col-lg col-md col"]//input[@disabled]
 ${anolyte_catholyte_noneditable_captured_solution}     //div[@class= "col-lg col-md col"]//select[@disabled]
+${test_details_options_input}     //label[text() = "%s"]/parent::div/div//input
+${test_details_options_clickable}     //label[text() = "%s"]/parent::div/div/div
 
 
 
@@ -156,8 +161,6 @@ ${browse_drive}     //span[text() = "Browse..."]/parent::button
 ${input_label_dropdown}     //span[@class = "widget-combobox-icon-container"]
 ${error_ok}     //button[text() = "OK"]
 ${warning_file_not_created}     //p[text() = "The Google Drive file has not been created yet. Please check your internet connection or refresh the page and try again."]
-
-
 
 
 ################## Google Drive Page #######################
@@ -184,6 +187,20 @@ ${p_stat_eis header}     //h1[text() = "Upload Potentiostat (PStat EIS) Results 
 ################## Upload PS Stat Page #######################
 ${p_stat_lsv_header}     //h1[text() = "Upload Potentiostat (PStat LSV) Results "]
 
+
+################## MEA Dashboard Page #######################
+${mea_dashboard_header}     //h2[contains(text(), "MEA Dashboard")]
+${mea_dashboard_superid}     //div[text() = "%s"]/ancestor::tr
+
+################## MEA Edit Page #######################
+${mea_edit_header}     //h1[text() = "MEA Edit"]
+${select_instrument}     //input[@value = "%s"]
+${file_upload_header}     //h4[text() = "File Upload"]
+
+
+
+
+
 ################## Master Data Page #######################
 ${capture_solution}     //label[text() = "Captured solution"]/parent::div/select/option[text() = "%s"]
 ${master_data_header}     //h1[text() = "Master Data"]
@@ -207,10 +224,6 @@ ${dd_icon_components_master_date}     //label[contains(text(), "Components")]/pa
 
 
 
-
-
-
-
 ################## User Management Page #######################
 ${user_management_header}     //h2[text() = "Account Overview"]
 ${new_local_user}     //button[text() = "New local user"]
@@ -223,15 +236,16 @@ ${users_table}     //div[text() = "%s"]
 
 
 
-
-
-
-
 ################## Results Page #######################
 ${header_results_page}     //h2[contains(text(), "Experiment Results and Visualizations")]
 ${category_results_page}     //h3[text() = "%s"]
 ${category_iframe_results_page}     //h3[text() = "%s"]/ancestor::header/following-sibling::div//iframe
 ${file_name_iframe}     //div[text() = "%s"]
+${category_error}     //span[contains(text(), "%s")]
+${sub_category_eis_results}     //a[text() = "EIS Results"]
+
+
+
 
 
 

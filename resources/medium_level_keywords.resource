@@ -95,6 +95,25 @@ Navigate to Dashboard Page
     Capture Page Screenshot
 
 
+Navigate to MEA Dashboard Page
+    [Documentation]    Navigate to MEA Dashboard Page
+    ...
+    ...    == Description: ==
+    ...    Navigate to MEA Dashboard Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    Click On Locator    ${sf_logo}
+    Wait For Locator    ${mea_dashboard_navigation}
+    Click On Locator    ${mea_dashboard_navigation}
+    Wait For Locator    ${mea_dashboard_header}
+    Capture Page Screenshot
+
+
 
 Navigate to Master Data Page
     [Documentation]    Navigate to Master Data Page
@@ -599,6 +618,32 @@ From Project Details Page Verify the Category "${Category}" with iterations "${N
     Wait For Composed Locator    ${project_details_table_category}    ${Category}
     Capture Page Screenshot
 
+Delete MEA with ID "${ID}" from Project Initiation Page
+    [Documentation]    Delete MEA with ID "${ID}" from Project Initiation Page
+    ...
+    ...    == Description: ==
+    ...    Delete MEA with ID "${ID}" from Project Initiation Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+    Wait For Locator    ${header_project_id}
+    Click On Locator    ${header_project_id}
+    Scroll To End Of Page
+    Capture Page Screenshot
+    FOR    ${index}    IN RANGE    50
+        Press Keys    NONE    ARROW_RIGHT
+        Sleep    0.05
+    END
+    Wait For Locator    ${universal_view_results}
+    Click On Locator    ${universal_view_results}
+    Wait For Locator    ${header_results_page}
+    Capture Page Screenshot
+
+
+
 
 Navigate to View Results from Select Experiment Page
     [Documentation]    Navigate to the bottom of the page from Select Experiment Page
@@ -778,6 +823,26 @@ Add Date of Fabrication "${DOF}" from MEA Details on Initiation Page
     Click On Locator    ${meadetails_date_icon}
     Click On Composed Locator    ${select_current_date}    ${DOF}
     Capture Page Screenshot
+
+Add Test Details "${Option}" from Testing Details Page with Value "${Value}"
+    [Documentation]    Input Test Details "${Option}" from Testing Details Page
+    ...
+    ...    == Description: ==
+    ...    Input Test Details "${Option}" from Testing Details Page 
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+    ${locator} =   Composed Locator    ${test_details_options_input}    ${Option}
+    Scroll Element Into View    ${locator}
+    Click On Composed Locator    ${test_details_options_clickable}    ${Option}    
+    Send Keys To Locator    ${locator}    ${Value}
+    Press Keys    NONE    ENTER
+    Capture Page Screenshot
+
+
 
 Verify Date of Fabrication to be the same as Current Date "${Current_Date}" 
     [Documentation]    Verify Date of Fabrication to be the same as Current Date 
@@ -990,12 +1055,14 @@ Browse from Google Drive
     Wait For Locator    ${browse_drive}
     Scroll Element Into View    ${browse_drive}
     Mouse Over    ${browse_drive}
-    Sleep    3
+    Sleep    2
     Click On Locator    ${browse_drive}
-    Sleep    10
+    # Sleep    10
+    Sleep    2
     Select Frame    ${iframe}
     Wait For Locator    ${my_drive}
-    Sleep    5
+    # Sleep    5
+    Sleep    2
     Capture Page Screenshot
 
 Browse drive to Sorafuel Folder
@@ -1014,10 +1081,12 @@ Browse drive to Sorafuel Folder
     Scroll Element Into View    ${browse_drive}
     Mouse Over    ${browse_drive}
     Click On Locator    ${browse_drive}
-    Sleep    5
+    # Sleep    5
+    Sleep    2
     # Wait For Locator    ${iframe}
     Select Frame    ${iframe}
-    Sleep    4
+    # Sleep    4
+    Sleep    2
     # Press Keys    NONE    ENTER
     # Sleep    4
     Capture Page Screenshot
@@ -1097,7 +1166,7 @@ Add file again if error with "${number}" iterations
     
 
 
-If error select file with "${Number}" iterations again for DC Power Supply
+If error select file with "${Number1}" and "${Number2}" iterations again for DC Power Supply with Time "${Time}"
     [Documentation]    Add file again
     ...
     ...    == Description: ==
@@ -1108,7 +1177,7 @@ If error select file with "${Number}" iterations again for DC Power Supply
 
     [Tags]    DONE
 
-    Sleep    2
+    Sleep    6
     ${Elements} =   Get WebElements    ${ok_universal}
     ${numbers} =   Get Length    ${Elements}
     IF    ${numbers} == 1
@@ -1121,8 +1190,11 @@ If error select file with "${Number}" iterations again for DC Power Supply
         # Sleep    0.5
         # Press Keys    NONE    ENTER 
         # Sleep    0.5
-        Select File with "${Number}" iterations from Google Drive
+        Select File with "${Number1}" iterations from Google Drive
         Capture Page Screenshot
+        Browse Drive for the Run: "TCD Run :1"
+        Select File with "7" iterations from Google Drive
+        Set Time as "40" from GC File Upload
     ELSE
         Wait Until Element Is Not Visible    ${ok_universal}   
     END
@@ -1144,7 +1216,7 @@ Navigate to "${Folder}" from Google Drive
     [Tags]    DONE
 
     
-    Sleep    3
+    # Sleep    3
     ${locator} =   Composed Locator    ${select_folder}    ${Folder}
     ${Elements} =   Get WebElements    ${locator}
     ${numbers} =   Get Length    ${Elements}
@@ -1209,16 +1281,18 @@ Select File with "${number}" iterations from Google Drive
 
     [Tags]    DONE
 
-    Sleep    3
+    # Sleep    3
     Convert To Integer    ${number}
     FOR    ${index}    IN RANGE    ${number}
         Press Keys    NONE    ARROW_RIGHT
         Sleep    0.3
     END
-    Sleep    4
+    # Sleep    4
+    Sleep    2
     Press Keys    NONE    ENTER 
-    Sleep    3
+    # Sleep    3
     Unselect Frame
+    # Sleep    8
     Sleep    2
     Capture Page Screenshot
 
@@ -1644,6 +1718,23 @@ Save and Close a Process
     Capture Page Screenshot
     Wait For Locator    ${new_project_button}
 
+Save and Close a Process from MEA Edit Page
+    [Documentation]    Save and Close a Process
+    ...
+    ...    == Description: ==
+    ...    Save and Close a Process
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    Wait For Locator    ${save_close_universal}
+    Scroll Element Into View    ${save_close_universal}
+    Click On Locator    ${save_close_universal}
+    Capture Page Screenshot
+    Wait For Locator    ${mea_dashboard_header}
 
 
 Verify that Date is already selected as the Current Date "${Current_Date}" 
@@ -1883,6 +1974,44 @@ Verify File Name "${FName}" being displayed for the Category "${Category}"
     Capture Page Screenshot
 
 
+Verify Error "${Error}" being displayed for the Category "${Category}"
+    [Documentation]    Browse from Google Drive  
+    ...
+    ...    == Description: ==
+    ...    Browse from Google Drive   
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Composed Locator    ${category_results_page}    ${Category}
+    Click On Composed Locator    ${category_results_page}    ${Category}
+    Wait For Composed Locator    ${category_error}    ${Error}
+    Wait For Composed Locator    ${category_results_page}    ${Category}
+    Click On Composed Locator    ${category_results_page}    ${Category}
+
+Verify Error "${Error}" being displayed for the Sub-Category EIS Results
+    [Documentation]    Browse from Google Drive  
+    ...
+    ...    == Description: ==
+    ...    Browse from Google Drive   
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Composed Locator    ${category_results_page}    Potentiostat Readings
+    Click On Composed Locator    ${category_results_page}    Potentiostat Readings
+    Click On Locator    ${sub_category_eis_results}
+    Wait For Composed Locator    ${category_error}    ${Error}
+    Wait For Composed Locator    ${category_results_page}    Potentiostat Readings
+    Click On Composed Locator    ${category_results_page}    Potentiostat Readings
+
+
 Verify that there is no Text Filter Error
     [Documentation]    Verify Text Filter Error is not visible 
     ...
@@ -2100,7 +2229,6 @@ Delete the Master Data Entry for Name "${Name}"
     Capture Page Screenshot
 
 
-
 Delete the Master Data Entry for Label "${Label}"
     [Documentation]    Delete the Master Data Entry for Label
     ...
@@ -2141,6 +2269,284 @@ Scroll To Delete for Master Data
     Sleep    1s
 
 
+Navigate to the Edit Functionality for the MEA "${Super_ID}" from MEA Dashboard Page
+    [Documentation]    Navigate to the Edit Functionality for the MEA "${Super_ID}" from MEA Dashboard Page
+    ...
+    ...    == Description: ==
+    ...    Navigate to the Edit Functionality for the MEA "${Super_ID}" from MEA Dashboard Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Composed Locator    ${mea_dashboard_superid}    ${Super_ID}
+    Click On Composed Locator    ${mea_dashboard_superid}    ${Super_ID}
+    Wait For Locator    ${edit_universal}
+    Click On Locator    ${edit_universal}
+    Wait For Locator    ${mea_edit_header}
+    Capture Page Screenshot
+
+
+Navigate to the View Results Functionality for the MEA "${Super_ID}" from MEA Dashboard Page
+    [Documentation]    Navigate to the View Results Functionality for the MEA "${Super_ID}" from MEA Dashboard Page
+    ...
+    ...    == Description: ==
+    ...    Navigate to the View Results Functionality for the MEA "${Super_ID}" from MEA Dashboard Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Composed Locator    ${mea_dashboard_superid}    ${Super_ID}
+    Click On Composed Locator    ${mea_dashboard_superid}    ${Super_ID}
+    Wait For Locator    ${universal_view_results}
+    Click On Locator    ${universal_view_results}
+    Wait For Locator    ${header_results_page}  
+    Capture Page Screenshot
+
+
+
+
+Delete the Initial File/Files for "${File_Type}" from the MEA Edit Page
+    [Documentation]    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Description: ==
+    ...    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Locator    ${delete_file_universal}
+    Scroll Element Into View    ${delete_file_universal}
+    Wait For Composed Locator    ${select_instrument}    ${File_Type}
+    Click On Composed Locator    ${select_instrument}    ${File_Type}
+    Wait For Locator    ${delete_file_universal}
+    Click On Locator    ${delete_file_universal}
+    Click On Locator    ${proceed_universal}
+    Click On Locator    ${ok_universal}
+    Capture Page Screenshot
+
+Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    [Documentation]    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Description: ==
+    ...    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Composed Locator    ${select_instrument}    ${File_Type}
+    Click On Composed Locator    ${select_instrument}    ${File_Type}
+    Wait For Locator    ${delete_file_universal}
+    Click On Locator    ${delete_file_universal}
+    Click On Locator    ${proceed_universal}
+    Click On Locator    ${ok_universal}
+    Capture Page Screenshot
+
+Delete the File/Files for PS from the MEA Edit Page and upload a new File with Iterations "${Number}"
+    [Documentation]    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Description: ==
+    ...    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Delete the Initial File/Files for "PS" from the MEA Edit Page
+    Browse from Google Drive
+    Navigate to "SoraFuel" from Google Drive
+    Select File with "${Number}" iterations from Google Drive
+    Add file again if error with "${Number}" iterations
+    Wait For Composed Locator    ${save_instrument_universal}    Save PS
+    Click On Composed Locator    ${save_instrument_universal}    Save PS
+    Capture Page Screenshot
+
+While Remembering Folder Delete the File/Files for EIS from the MEA Edit Page and upload a new File with Iterations "${Number}"
+    [Documentation]    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Description: ==
+    ...    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Delete the Initial File/Files for "EIS" from the MEA Edit Page
+    Browse drive to Sorafuel Folder
+    Select File with "${Number}" iterations from Google Drive
+    Wait For Composed Locator    ${save_instrument_universal}    Save EIS
+    Click On Composed Locator    ${save_instrument_universal}    Save EIS
+    Wait For Locator    ${proceed_universal}
+    Click On Locator    ${proceed_universal}
+    Wait For Locator    ${ok_universal}
+    Click On Locator    ${ok_universal}
+    Capture Page Screenshot
+
+
+While Remembering Folder Delete the File/Files for LSV from the MEA Edit Page and upload a new File with Iterations "${Number}"
+    [Documentation]    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Description: ==
+    ...    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Delete the Initial File/Files for "LSV" from the MEA Edit Page
+    Browse drive to Sorafuel Folder
+    Select File with "${Number}" iterations from Google Drive
+    Wait For Composed Locator    ${save_instrument_universal}    Save LSV
+    Click On Composed Locator    ${save_instrument_universal}    Save LSV
+    Wait For Locator    ${ok_universal}
+    Click On Locator    ${ok_universal}
+    Wait Until Element Is Not Visible    ${ok_universal}
+    Capture Page Screenshot
+
+While Remembering Folder Delete the File/Files for GC from the MEA Edit Page and upload a new File with Iterations "${Number1}" "${Number2}"
+    [Documentation]    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Description: ==
+    ...    Delete the File/Files for "${File_Type}" from the MEA Edit Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Delete the Initial File/Files for "GC" from the MEA Edit Page
+    Navigate to Upload GC Files tab
+    Browse Drive for the Run: "FID Run : 1"
+    Select File with "${Number1}" iterations from Google Drive
+    Browse Drive for the Run: "TCD Run :1"
+    Select File with "${Number2}" iterations from Google Drive
+    Set Time as "40" from GC File Upload
+    Save Changes from GC File Upload
+    If error select file with "${Number1}" and "${Number2}" iterations again for DC Power Supply with Time "40"
+    Wait For Composed Locator    ${save_instrument_universal}    Save GC
+    Click On Composed Locator    ${save_instrument_universal}    Save GC
+    Capture Page Screenshot
+
+Upload a new File for Intrument PS with Iterations "${Number}"
+    [Documentation]    Upload a new File for Intrument PS with Iterations "${Number}"
+    ...
+    ...    == Description: ==
+    ...    Upload a new File for Intrument PS with Iterations "${Number}"
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Locator    ${file_upload_header}
+    Scroll Element Into View    ${file_upload_header}
+    Wait For Composed Locator    ${select_instrument}    PS
+    Click On Composed Locator    ${select_instrument}    PS
+    Browse from Google Drive
+    Navigate to "SoraFuel" from Google Drive
+    Select File with "${Number}" iterations from Google Drive
+    Add file again if error with "${Number}" iterations
+    Wait For Composed Locator    ${save_instrument_universal}    Save PS
+    Click On Composed Locator    ${save_instrument_universal}    Save PS
+    Capture Page Screenshot
+
+For Instrument EIS While Remembering Folder upload a new File with Iterations "${Number}"
+    [Documentation]    While Remembering Folder upload a new File for EIS with Iterations "${Number}"
+    ...
+    ...    == Description: ==
+    ...    While Remembering Folder upload a new File for EIS with Iterations "${Number}"
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Locator    ${file_upload_header}
+    Scroll Element Into View    ${file_upload_header}
+    Wait For Composed Locator    ${select_instrument}    EIS
+    Click On Composed Locator    ${select_instrument}    EIS
+    Browse drive to Sorafuel Folder
+    Select File with "${Number}" iterations from Google Drive
+    Wait For Composed Locator    ${save_instrument_universal}    Save EIS
+    Click On Composed Locator    ${save_instrument_universal}    Save EIS
+    Wait For Locator    ${proceed_universal}
+    Click On Locator    ${proceed_universal}
+    Wait For Locator    ${ok_universal}
+    Click On Locator    ${ok_universal}
+    Capture Page Screenshot
+
+For Instrument LSV While Remembering Folder upload a new File with Iterations "${Number}"
+    [Documentation]    While Remembering Folder upload a new File for LSV with Iterations "${Number}"
+    ...
+    ...    == Description: ==
+    ...    While Remembering Folder upload a new File for LSV with Iterations "${Number}"
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Locator    ${file_upload_header}
+    Scroll Element Into View    ${file_upload_header}
+    Wait For Composed Locator    ${select_instrument}    LSV
+    Click On Composed Locator    ${select_instrument}    LSV
+    Browse drive to Sorafuel Folder
+    Select File with "${Number}" iterations from Google Drive
+    Wait For Composed Locator    ${save_instrument_universal}    Save LSV
+    Click On Composed Locator    ${save_instrument_universal}    Save LSV
+    Wait For Locator    ${ok_universal}
+    Click On Locator    ${ok_universal}
+    Capture Page Screenshot
+
+
+For Instrument GC While Remembering Folder upload a new File with Iterations "${Number1}" "${Number2}"
+    [Documentation]    While Remembering Folder upload a new File GC with Iterations "${Number1}" "${Number2}"
+    ...
+    ...    == Description: ==
+    ...    While Remembering Folder upload a new File GC with Iterations "${Number1}" "${Number2}"
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Locator    ${file_upload_header}
+    Scroll Element Into View    ${file_upload_header}
+    Wait For Composed Locator    ${select_instrument}    GC
+    Click On Composed Locator    ${select_instrument}    GC
+    Navigate to Upload GC Files tab
+    Browse Drive for the Run: "FID Run : 1"
+    Select File with "${Number1}" iterations from Google Drive
+    Browse Drive for the Run: "TCD Run :1"
+    Select File with "${Number2}" iterations from Google Drive
+    Set Time as "40" from GC File Upload
+    Save Changes from GC File Upload
+    If error select file with "${Number1}" and "${Number2}" iterations again for DC Power Supply with Time "40"
+    Wait For Composed Locator    ${save_instrument_universal}    Save GC
+    Click On Composed Locator    ${save_instrument_universal}    Save GC
+    Capture Page Screenshot
 
 
 
