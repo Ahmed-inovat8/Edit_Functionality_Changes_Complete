@@ -1,6 +1,9 @@
 *** Settings ***
 Library           SeleniumLibrary
 Resource          low_level_keywords.resource
+
+*** Variables ***
+${INSTRUMENTS_PATH}    D:/SorafuelAutomationTesting/Inovat8-Project-database-main/Instruments
 # Library           locators.py
 
 *** Keywords ***

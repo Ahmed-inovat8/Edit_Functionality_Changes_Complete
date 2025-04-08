@@ -877,6 +877,12 @@ Set Fabricated by to "${Fabricated_by}" from MEA Details on Initiation Page
     
     Scroll Element Into View    ${meadetails_fabricated_by}
     Click On Locator    ${meadetails_fabricated_by_div}
+    Click On Locator    ${meadetails_fabricated_by}
+    Sleep    0.5
+    FOR    ${index}    IN RANGE    10
+        Press Keys    NONE    ARROW_LEFT
+        Sleep    0.05
+    END
     Send Keys To Locator    ${meadetails_fabricated_by}    ${Fabricated_by}
     Press Key    ${meadetails_fabricated_by}    \\13
     Capture Page Screenshot
@@ -1667,6 +1673,8 @@ Select the following Value "${Value}" for the "${Catalyst_Layer_ID}" from Experi
     Wait For Locator    ${locator}
     Scroll Element Into View    ${locator}
     Click On Locator    ${locator}
+    ${locator1} =   Composed Locator    ${id_catalyst_layer}    ${Catalyst_Layer_ID}
+    Click On Locator    ${locator1}
     Sleep    0.5
     Press Keys    NONE    CTRL+A
     Sleep    0.5
@@ -2561,6 +2569,28 @@ For Instrument GC While Remembering Folder upload a new File with Iterations "${
     Wait For Locator    ${proceed_universal}
     Click On Locator    ${proceed_universal}
     Capture Page Screenshot
+
+
+
+# Navigate to Instruments Directory
+#         [Documentation]    Navigate to Instruments Directory
+#         ...
+#         ...    == Description: ==
+#         ...    Navigate to Instruments Directory
+#         ...
+#         ...    == Author: ==
+#         ...    Ahmed Mazhar
+
+#         [Tags]    DONE
+
+#         Select Import type for Upload DC Power Supply to "Google Drive"
+#         Select Import type for Upload DC Power Supply to "Local"
+#         Wait For Locator    ${browse_local_universal}
+#         Scroll Element Into View    ${browse_local_universal}
+#         Click On Locator    ${browse_local_universal}
+#         Sleep    2
+#         Set Directory Path    D:\SorafuelAutomationTesting\Inovat8-Project-database-main\Instruments
+#         Capture Page Screenshot
 
 
 

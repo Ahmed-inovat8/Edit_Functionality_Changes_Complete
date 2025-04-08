@@ -508,3 +508,37 @@ Verify value "${value}" on position "${position}" for Step "${Step}" via scrolls
     Wait For Composed Locator made with two inputs    ${test_step_index}    ${position}    ${Step}
     Wait For Composed Locator made with two inputs    ${test_value_index}    ${position}    ${value}
     Capture Page Screenshot
+
+
+  
+Verify that DC Power Supply Readings are "${Value}"
+    [Documentation]    Verify that the new MEA for Category has the ID in the database
+    ...
+    ...    == Description: ==
+    ...    Verify that the new MEA for Category has the ID in the database
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Locator    ${bezzomate_search_bar}
+    Scroll Element Into View    ${bezzomate_search_bar}
+    Double Click Element    ${bezzomate_search_bar}
+    Click On Locator    ${bezzomate_search_bar}
+    Sleep    2
+    Press Keys    NONE    CTRL+A
+    Press Keys    NONE    BACKSPACE
+    Send Keys To Locator    ${bezzomate_search_bar}    DCPowerSupplyReading
+    Click On Composed Locator    ${bezzomate_search_result}    DCPowerSupplyReading
+    Wait For Locator    ${instance_bezzomate}
+    Click On Locator    ${instance_bezzomate}
+    Wait For Locator    ${header_actions}
+    ${locator} =   Composed Locator    ${dc_readings}    ${Value}
+    Wait For Locator    ${locator}
+    Scroll Element Into View    ${locator}
+    Double Click Element    ${locator}    
+    Capture Page Screenshot
+
+  
