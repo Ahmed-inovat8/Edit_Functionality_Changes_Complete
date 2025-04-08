@@ -46,4 +46,5 @@ US10 Verifying Project Delete Functionality from Database
     Navigate to the Category "Database" from Bezzomate
     Verify that DC Power Supply Readings are "181261"
     Unaccess Bezzomate
+    
     [Teardown]    Close Browser
