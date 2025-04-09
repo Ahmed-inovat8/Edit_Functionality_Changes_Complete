@@ -9,7 +9,11 @@ US10 Verifying Project Delete Functionality from Database
     Login to Sora Fuel while adding Bezzomate
     Access Bezzomate
     Navigate to the Category "Database" from Bezzomate
-    Verify that DC Power Supply Readings are "181261"
+    Verify that the readings for "DCPowerSupplyReading" are "181261"
+    Verify that the readings for "TCD" are "36"
+    Verify that the readings for "FID" are "72"
+    Verify that the readings for "EIS" are "1397"
+    Verify that the readings for "LSV" are "22479"
     Unaccess Bezzomate
     Create a New Project from Dashboard
     Enter all the following credentials in New Project Page "Automation Test", "Testing MEA Edit Functionality", "Ahmed"
@@ -35,16 +39,40 @@ US10 Verifying Project Delete Functionality from Database
     Select File with "3" iterations from Google Drive
     Add file again if error with "3" iterations
     Navigate to GC Files Page from Upload DC Power Supply Page
+    Enter Label "1" in GC Results Page via pressing Tab
+    Navigate to Upload GC Files tab
+    Browse Drive for the Run: "FID Run : 1"
+    Select File with "6" iterations from Google Drive
+    Browse Drive for the Run: "TCD Run :1"
+    Select File with "7" iterations from Google Drive
+    Set Time as "40" from GC File Upload
+    Save Changes from GC File Upload
+    If error select file with "6" and "7" iterations again for DC Power Supply with Time "40"
+    Navigate to PStat EIS Page from GC Files Page
+    Enter Label "P Stat Configuration" in PStat EIS Data
+    Browse drive to Sorafuel Folder
+    Select File with "4" iterations from Google Drive
+    Navigate to PStat LSV Page from PStat EIS Page
+    Browse drive to Sorafuel Folder
+    Select File with "5" iterations from Google Drive
+    Save and Close a Process
     Refresh Feed
     Access Bezzomate
     Navigate to the Category "Database" from Bezzomate
-    Verify that DC Power Supply Readings are "184574"
+    Verify that the readings for "DCPowerSupplyReading" are "184574"
+    Verify that the readings for "TCD" are "37"
+    Verify that the readings for "FID" are "74"
+    Verify that the readings for "EIS" are "1467"
+    Verify that the readings for "LSV" are "23404"
     Unaccess Bezzomate
     Delete a Project from Dashboard
     Refresh Feed
     Access Bezzomate
     Navigate to the Category "Database" from Bezzomate
-    Verify that DC Power Supply Readings are "181261"
+    Verify that the readings for "DCPowerSupplyReading" are "181261"
+    Verify that the readings for "TCD" are "36"
+    Verify that the readings for "FID" are "72"
+    Verify that the readings for "EIS" are "1397"
+    Verify that the readings for "LSV" are "22479"
     Unaccess Bezzomate
-    
     [Teardown]    Close Browser

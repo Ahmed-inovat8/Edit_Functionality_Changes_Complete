@@ -511,7 +511,7 @@ Verify value "${value}" on position "${position}" for Step "${Step}" via scrolls
 
 
   
-Verify that DC Power Supply Readings are "${Value}"
+Verify that the readings for "${Readings}" are "${Value}"
     [Documentation]    Verify that the new MEA for Category has the ID in the database
     ...
     ...    == Description: ==
@@ -530,8 +530,8 @@ Verify that DC Power Supply Readings are "${Value}"
     Sleep    2
     Press Keys    NONE    CTRL+A
     Press Keys    NONE    BACKSPACE
-    Send Keys To Locator    ${bezzomate_search_bar}    DCPowerSupplyReading
-    Click On Composed Locator    ${bezzomate_search_result}    DCPowerSupplyReading
+    Send Keys To Locator    ${bezzomate_search_bar}    ${Readings}
+    Click On Composed Locator    ${bezzomate_search_result}    ${Readings}
     Wait For Locator    ${instance_bezzomate}
     Click On Locator    ${instance_bezzomate}
     Wait For Locator    ${header_actions}
