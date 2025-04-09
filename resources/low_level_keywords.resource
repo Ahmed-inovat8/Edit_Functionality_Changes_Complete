@@ -75,6 +75,23 @@ Click On Composed Locator
     Click On Locator    ${composed}
     RETURN    ${composed}
 
+Click on Composed Locator made with two inputs
+    [Arguments]    ${locator}    ${text1}     ${text2}    ${timeout}=40
+    [Documentation]    Click the element identified by ``locator`` and its text.
+    ...
+    ...    == Description: ==
+    ...    Wait the element to be visible and then click it
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+    ...
+    ...    *Examples:*
+    ...    | Click on Composed Locator made with two inputs | ${auth_page.submit} | Name | Submit |
+    [Tags]    DONE
+    ${composed}=    Evaluate    '${locator}' % ('${text1}', '${text2}')
+    Click On Locator    ${composed}
+    RETURN    ${composed}
+
     
 Composed Locator
     [Arguments]    ${locator}    ${text}

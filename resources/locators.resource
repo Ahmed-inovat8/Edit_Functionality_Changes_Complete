@@ -191,6 +191,22 @@ ${p_stat_lsv_header}     //h1[text() = "Upload Potentiostat (PStat LSV) Results 
 ################## MEA Dashboard Page #######################
 ${mea_dashboard_header}     //h2[contains(text(), "MEA Dashboard")]
 ${mea_dashboard_superid}     //div[text() = "%s"]/ancestor::tr
+${mea_search}     //div[@class = "mx-grid-controlbar"]//button[text() = "Search"]
+
+
+
+
+################## MEA Search Page #######################
+${mea_search_node}     //div[@class = "mx-tabcontainer mx-name-tabContainer1 spacing-outer-top-large tab-lined"]//label[text() = "Super ID"]
+${input_search_filter_clickable}     //label[contains(text(), "%s")]/ancestor::div[@class = "mx-grid-search-item"]//input/parent::div
+${input_search_filter}     //label[contains(text(), "%s")]/ancestor::div[@class = "mx-grid-search-item"]//input
+${select_search_filter_clickable}     //label[contains(text(), "%s")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div
+${select_search_filter_option}     //label[contains(text(), "%s")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "%s")]
+${search_grid_search}     //div[@class = "mx-grid-searchbar"]//button[text() = "Search"]
+${search_result_superid}     //tr[@class = "mx-name-index-0"]//div[text() = "%s"]
+
+
+
 
 ################## MEA Edit Page #######################
 ${mea_edit_header}     //h1[text() = "MEA Edit"]

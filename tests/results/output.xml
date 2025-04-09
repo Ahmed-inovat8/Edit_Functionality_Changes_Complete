@@ -1,33 +1,1419 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-08T13:49:04.734458" rpa="false" schemaversion="5">
-<suite id="s1" name="SF US21" source="D:\SorafuelAutomationTesting\Inovat8-Project-database-main\tests\SF_US21.robot">
-<test id="s1-t1" name="US21 Testing MEA Edit Functionality, Editing Testing Details and MEA Configurations" line="7">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-09T17:43:10.923044" rpa="false" schemaversion="5">
+<suite id="s1" name="SF US22" source="D:\SorafuelAutomationTesting\Inovat8-Project-database-main\tests\SF_US22.robot">
+<test id="s1-t1" name="US22 Verifying the Functionality of Search" line="7">
 <kw name="Login to Sora Fuel" owner="medium_level_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-08T13:49:05.182284" level="INFO">Opening browser 'chrome' to base url 'https://sorafuel.inovat8.com/'.</msg>
-<msg time="2025-04-08T13:49:05.536670" level="WARN">The chromedriver version (134.0.6998.35) detected in PATH at D:\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.42); currently, chromedriver 135.0.7049.42 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-04-09T17:43:11.379164" level="INFO">Opening browser 'chrome' to base url 'https://sorafuel.inovat8.com/'.</msg>
+<msg time="2025-04-09T17:43:11.724409" level="WARN">The chromedriver version (134.0.6998.35) detected in PATH at D:\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.84); currently, chromedriver 135.0.7049.84 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>https://sorafuel.inovat8.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-08T13:49:05.182082" elapsed="2.812640"/>
+<status status="PASS" start="2025-04-09T17:43:11.378957" elapsed="2.496178"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-08T13:49:07.995201" elapsed="2.445966"/>
+<status status="PASS" start="2025-04-09T17:43:13.875669" elapsed="2.432554"/>
 </kw>
 <kw name="Click On Composed Locator" owner="low_level_keywords">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-04-08T13:49:10.444948" level="INFO">${composed} = //div/label[text() = "Username"]/following-sibling::div/input</msg>
+<msg time="2025-04-09T17:43:16.312465" level="INFO">${composed} = //div/label[text() = "Username"]/following-sibling::div/input</msg>
 <var>${composed}</var>
 <arg>'${locator}' % '${text}'</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-04-08T13:49:10.444682" elapsed="0.000300"/>
+<status status="PASS" start="2025-04-09T17:43:16.312200" elapsed="0.000298"/>
 </kw>
 <kw name="Click On Locator" owner="low_level_keywords">
 <kw name="Wait For Locator" owner="low_level_keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:16.327913" elapsed="1.123893"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:16.327533" elapsed="1.124437"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:17.452520" level="INFO">Clicking element '//div/label[text() = "Username"]/following-sibling::div/input'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:17.452245" elapsed="0.084087"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:16.315481" elapsed="1.221021"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:17.536634" elapsed="0.000096"/>
+</return>
+<arg>${login_credenetials}</arg>
+<arg>Username</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:16.311746" elapsed="1.225193"/>
+</kw>
+<kw name="Send Keys to Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:17.553674" level="INFO">${composed} = //div/label[text() = "Username"]/following-sibling::div/input</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${element_required_to_compose}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:17.553203" elapsed="0.000526"/>
+</kw>
+<kw name="Send Keys To Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:17.571226" elapsed="0.018893"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:17.570773" elapsed="0.019454"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:17.590410" elapsed="0.042366"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:17.633686" level="INFO">Sending key(s) ('Ahmed',) to //div/label[text() = "Username"]/following-sibling::div/input element.</msg>
+<msg time="2025-04-09T17:43:17.945630" level="INFO">Sending keys Ahmed</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-09T17:43:17.633092" elapsed="0.401823"/>
+</kw>
+<arg>${composed}</arg>
+<arg>${text_to_enter}</arg>
+<tag>DONE</tag>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-09T17:43:17.560164" elapsed="0.475030"/>
+</kw>
+<arg>${login_credenetials}</arg>
+<arg>Username</arg>
+<arg>Ahmed</arg>
+<tag>DONE</tag>
+<doc>Enter input in the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:17.552782" elapsed="0.482585"/>
+</kw>
+<kw name="Click On Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:18.039574" level="INFO">${composed} = //div/label[text() = "Password"]/following-sibling::div/input</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.039323" elapsed="0.000286"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.051276" elapsed="0.015818"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.050873" elapsed="0.016360"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:18.067597" level="INFO">Clicking element '//div/label[text() = "Password"]/following-sibling::div/input'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.067407" elapsed="0.052840"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.042865" elapsed="0.077694"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:18.120701" elapsed="0.000091"/>
+</return>
+<arg>${login_credenetials}</arg>
+<arg>Password</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.038931" elapsed="0.082399"/>
+</kw>
+<kw name="Send Keys to Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:18.131307" level="INFO">${composed} = //div/label[text() = "Password"]/following-sibling::div/input</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${element_required_to_compose}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.131049" elapsed="0.000290"/>
+</kw>
+<kw name="Send Keys To Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.143577" elapsed="0.014861"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.143135" elapsed="0.015410"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.158736" elapsed="0.030025"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:18.189408" level="INFO">Sending key(s) ('Ahmed@123',) to //div/label[text() = "Password"]/following-sibling::div/input element.</msg>
+<msg time="2025-04-09T17:43:18.488095" level="INFO">Sending keys Ahmed@123</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.188996" elapsed="0.376386"/>
+</kw>
+<arg>${composed}</arg>
+<arg>${text_to_enter}</arg>
+<tag>DONE</tag>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.137042" elapsed="0.428565"/>
+</kw>
+<arg>${login_credenetials}</arg>
+<arg>Password</arg>
+<arg>Ahmed@123</arg>
+<tag>DONE</tag>
+<doc>Enter input in the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.130670" elapsed="0.435658"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:18.738878" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.566892" elapsed="0.172144"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.753586" elapsed="0.017700"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.753232" elapsed="0.018164"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:18.771774" level="INFO">Clicking element '//button[text() = "Sign in"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.771575" elapsed="0.053894"/>
+</kw>
+<arg>${signin_button}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.744670" elapsed="0.080918"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.838109" elapsed="3.766523"/>
+</kw>
+<arg>${new_project_button}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:18.837720" elapsed="3.767082"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:22.845297" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:22.605110" elapsed="0.240385"/>
+</kw>
+<tag>DONE</tag>
+<doc>Login to Sora Fuel</doc>
+<status status="PASS" start="2025-04-09T17:43:11.378220" elapsed="11.467483"/>
+</kw>
+<kw name="Navigate to MEA Dashboard Page" owner="medium_level_keywords">
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:22.858487" elapsed="0.018336"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:22.858171" elapsed="0.018757"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:22.877316" level="INFO">Clicking element '//span[@class = "mx-link mx-name-sidebarToggle3 toggle-btn custom-button-css btn-lg btn-block"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:22.877123" elapsed="0.075717"/>
+</kw>
+<arg>${sf_logo}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:22.852109" elapsed="0.100845"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:22.959819" elapsed="0.019610"/>
+</kw>
+<arg>${mea_dashboard_navigation}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:22.959439" elapsed="0.020311"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:23.004938" elapsed="0.029738"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:23.004188" elapsed="0.030652"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:23.035284" level="INFO">Clicking element '//a[text() = " MEA"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:23.035023" elapsed="0.139627"/>
+</kw>
+<arg>${mea_dashboard_navigation}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:22.986348" elapsed="0.188576"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:23.191542" elapsed="1.270152"/>
+</kw>
+<arg>${mea_dashboard_header}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:23.191175" elapsed="1.271517"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:24.659414" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-51.png"&gt;&lt;img src="selenium-screenshot-51.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:24.463089" elapsed="0.196479"/>
+</kw>
+<tag>DONE</tag>
+<doc>Navigate to MEA Dashboard Page</doc>
+<status status="PASS" start="2025-04-09T17:43:22.846579" elapsed="1.813642"/>
+</kw>
+<kw name="Navigate to Search from MEA Dashboard Page" owner="medium_level_keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${mea_search}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:24.663319" elapsed="0.297258"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:24.975147" elapsed="0.018996"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:24.974680" elapsed="0.019648"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:24.994970" level="INFO">Clicking element '//div[@class = "mx-grid-controlbar"]//button[text() = "Search"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:24.994658" elapsed="0.091939"/>
+</kw>
+<arg>${mea_search}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:24.965228" elapsed="0.121534"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:25.098199" elapsed="0.776750"/>
+</kw>
+<arg>${mea_search_node}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:25.097793" elapsed="0.777304"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:26.178882" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-52.png"&gt;&lt;img src="selenium-screenshot-52.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:25.875885" elapsed="0.303152"/>
+</kw>
+<tag>DONE</tag>
+<doc>Navigate to Search from MEA Dashboard Page</doc>
+<status status="PASS" start="2025-04-09T17:43:24.662921" elapsed="1.516270"/>
+</kw>
+<kw name="Input Search Filter &quot;Super ID&quot; as Value &quot;P0019-E0001-M0001&quot; from Search Page" owner="medium_level_keywords" source_name="Input Search Filter &quot;${Filter}&quot; as Value &quot;${Value}&quot; from Search Page">
+<kw name="Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:26.189842" level="INFO">${composed} = //label[contains(text(), "Super ID")]/ancestor::div[@class = "mx-grid-search-item"]//input/parent::div</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.189451" elapsed="0.000447"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:26.190010" elapsed="0.000065"/>
+</return>
+<msg time="2025-04-09T17:43:26.190278" level="INFO">${locator} = //label[contains(text(), "Super ID")]/ancestor::div[@class = "mx-grid-search-item"]//input/parent::div</msg>
+<var>${locator}</var>
+<arg>${input_search_filter_clickable}</arg>
+<arg>${Filter}</arg>
+<tag>DONE</tag>
+<doc>Provides a Composed Locator</doc>
+<status status="PASS" start="2025-04-09T17:43:26.188810" elapsed="0.001517"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.190617" elapsed="0.301811"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.510003" elapsed="0.013741"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.509618" elapsed="0.014246"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:26.524229" level="INFO">Clicking element '//label[contains(text(), "Super ID")]/ancestor::div[@class = "mx-grid-search-item"]//input/parent::div'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.524033" elapsed="0.068694"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.498094" elapsed="0.094749"/>
+</kw>
+<kw name="Send Keys to Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:26.597555" level="INFO">${composed} = //label[contains(text(), "Super ID")]/ancestor::div[@class = "mx-grid-search-item"]//input</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${element_required_to_compose}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.597340" elapsed="0.000245"/>
+</kw>
+<kw name="Send Keys To Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.609204" elapsed="0.017037"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.608598" elapsed="0.017772"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.626646" elapsed="0.033199"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:26.660712" level="INFO">Sending key(s) ('P0019-E0001-M0001',) to //label[contains(text(), "Super ID")]/ancestor::div[@class = "mx-grid-search-item"]//input element.</msg>
+<msg time="2025-04-09T17:43:26.966244" level="INFO">Sending keys P0019-E0001-M0001</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.660165" elapsed="0.684168"/>
+</kw>
+<arg>${composed}</arg>
+<arg>${text_to_enter}</arg>
+<tag>DONE</tag>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.600623" elapsed="0.743885"/>
+</kw>
+<arg>${input_search_filter}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Enter input in the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:26.596967" elapsed="0.747660"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:27.345342" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2025-04-09T17:43:27.345447" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2025-04-09T17:43:27.345506" level="INFO">Releasing special key ENTER.</msg>
+<arg>NONE</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.344893" elapsed="0.009180"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:27.515161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-53.png"&gt;&lt;img src="selenium-screenshot-53.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.354428" elapsed="0.160909"/>
+</kw>
+<tag>DONE</tag>
+<doc>Input Search Filter as Value from Search Page</doc>
+<status status="PASS" start="2025-04-09T17:43:26.180498" elapsed="1.334993"/>
+</kw>
+<kw name="Select Search Filter &quot;is MEA standard&quot; as Value &quot;Yes&quot; from Search Page" owner="medium_level_keywords" source_name="Select Search Filter &quot;${Filter}&quot; as Value &quot;${Value}&quot; from Search Page">
+<kw name="Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:27.523532" level="INFO">${composed} = //label[contains(text(), "is MEA standard")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.523146" elapsed="0.000443"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:27.523697" elapsed="0.000063"/>
+</return>
+<msg time="2025-04-09T17:43:27.524220" level="INFO">${locator} = //label[contains(text(), "is MEA standard")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${locator}</var>
+<arg>${select_search_filter_clickable}</arg>
+<arg>${Filter}</arg>
+<tag>DONE</tag>
+<doc>Provides a Composed Locator</doc>
+<status status="PASS" start="2025-04-09T17:43:27.522512" elapsed="0.001771"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.524599" elapsed="0.289788"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.834577" elapsed="0.016875"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.833997" elapsed="0.017654"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:27.852345" level="INFO">Clicking element '//label[contains(text(), "is MEA standard")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.851999" elapsed="0.117308"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.820265" elapsed="0.149202"/>
+</kw>
+<kw name="Wait For Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:27.980733" level="INFO">${composed} = //label[contains(text(), "is MEA standard")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Yes")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.979749" elapsed="0.001151"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.989572" elapsed="0.031402"/>
+</kw>
+<arg>${composed}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.989162" elapsed="0.031959"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:28.021225" elapsed="0.000064"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:27.978920" elapsed="0.042536"/>
+</kw>
+<kw name="Click on Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:28.032903" level="INFO">${composed} = //label[contains(text(), "is MEA standard")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Yes")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.032629" elapsed="0.000310"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.050073" elapsed="0.020726"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.049524" elapsed="0.021429"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:28.071528" level="INFO">Clicking element '//label[contains(text(), "is MEA standard")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Yes")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.071231" elapsed="0.056826"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.036173" elapsed="0.092179"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:28.128535" elapsed="0.000183"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.032165" elapsed="0.097065"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:28.290856" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.129642" elapsed="0.161368"/>
+</kw>
+<tag>DONE</tag>
+<doc>Select Search Filter as Value from Search Page</doc>
+<status status="PASS" start="2025-04-09T17:43:27.516107" elapsed="0.775097"/>
+</kw>
+<kw name="Select Search Filter &quot;Created By&quot; as Value &quot;Ahmed&quot; from Search Page" owner="medium_level_keywords" source_name="Select Search Filter &quot;${Filter}&quot; as Value &quot;${Value}&quot; from Search Page">
+<kw name="Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:28.300293" level="INFO">${composed} = //label[contains(text(), "Created By")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.299947" elapsed="0.000503"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:28.300555" elapsed="0.000063"/>
+</return>
+<msg time="2025-04-09T17:43:28.300837" level="INFO">${locator} = //label[contains(text(), "Created By")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${locator}</var>
+<arg>${select_search_filter_clickable}</arg>
+<arg>${Filter}</arg>
+<tag>DONE</tag>
+<doc>Provides a Composed Locator</doc>
+<status status="PASS" start="2025-04-09T17:43:28.299382" elapsed="0.001502"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.301176" elapsed="0.279407"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.591757" elapsed="0.016069"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.591102" elapsed="0.016943"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:28.608709" level="INFO">Clicking element '//label[contains(text(), "Created By")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.608415" elapsed="0.105874"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.583888" elapsed="0.130849"/>
+</kw>
+<kw name="Wait For Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:28.721323" level="INFO">${composed} = //label[contains(text(), "Created By")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Ahmed")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.721058" elapsed="0.000302"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.735368" elapsed="0.031414"/>
+</kw>
+<arg>${composed}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.734945" elapsed="0.031997"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:28.767049" elapsed="0.000062"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.720596" elapsed="0.046684"/>
+</kw>
+<kw name="Click on Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:28.776316" level="INFO">${composed} = //label[contains(text(), "Created By")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Ahmed")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.775731" elapsed="0.000646"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.798551" elapsed="0.019942"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.798039" elapsed="0.020562"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:28.818979" level="INFO">Clicking element '//label[contains(text(), "Created By")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Ahmed")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.818777" elapsed="0.042958"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.782767" elapsed="0.079084"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:28.861915" elapsed="0.000045"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.774199" elapsed="0.087874"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:29.137524" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:28.862246" elapsed="0.275414"/>
+</kw>
+<tag>DONE</tag>
+<doc>Select Search Filter as Value from Search Page</doc>
+<status status="PASS" start="2025-04-09T17:43:28.292477" elapsed="0.845381"/>
+</kw>
+<kw name="Select Search Filter &quot;Tested By&quot; as Value &quot;Ahmed&quot; from Search Page" owner="medium_level_keywords" source_name="Select Search Filter &quot;${Filter}&quot; as Value &quot;${Value}&quot; from Search Page">
+<kw name="Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:29.151033" level="INFO">${composed} = //label[contains(text(), "Tested By")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.150667" elapsed="0.000436"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:29.151212" elapsed="0.000060"/>
+</return>
+<msg time="2025-04-09T17:43:29.151492" level="INFO">${locator} = //label[contains(text(), "Tested By")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${locator}</var>
+<arg>${select_search_filter_clickable}</arg>
+<arg>${Filter}</arg>
+<tag>DONE</tag>
+<doc>Provides a Composed Locator</doc>
+<status status="PASS" start="2025-04-09T17:43:29.150026" elapsed="0.001516"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.151824" elapsed="0.308694"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.478194" elapsed="0.015910"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.477609" elapsed="0.016643"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:29.494781" level="INFO">Clicking element '//label[contains(text(), "Tested By")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.494513" elapsed="0.121441"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.466299" elapsed="0.149838"/>
+</kw>
+<kw name="Wait For Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:29.628645" level="INFO">${composed} = //label[contains(text(), "Tested By")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Ahmed")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.628025" elapsed="0.000685"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.647855" elapsed="0.039103"/>
+</kw>
+<arg>${composed}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.647085" elapsed="0.040095"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:29.687319" elapsed="0.000072"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.627250" elapsed="0.060359"/>
+</kw>
+<kw name="Click on Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:29.700662" level="INFO">${composed} = //label[contains(text(), "Tested By")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Ahmed")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.700257" elapsed="0.000474"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.732495" elapsed="0.033638"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.731095" elapsed="0.035201"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:29.766918" level="INFO">Clicking element '//label[contains(text(), "Tested By")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "Ahmed")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.766574" elapsed="0.066371"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.709389" elapsed="0.123738"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:29.833250" elapsed="0.000083"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.699456" elapsed="0.134068"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:30.003112" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:29.833855" elapsed="0.169394"/>
+</kw>
+<tag>DONE</tag>
+<doc>Select Search Filter as Value from Search Page</doc>
+<status status="PASS" start="2025-04-09T17:43:29.141627" elapsed="0.861771"/>
+</kw>
+<kw name="Select Search Filter &quot;CatalystLayerCathode ID&quot; as Value &quot;456&quot; from Search Page" owner="medium_level_keywords" source_name="Select Search Filter &quot;${Filter}&quot; as Value &quot;${Value}&quot; from Search Page">
+<kw name="Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:30.014102" level="INFO">${composed} = //label[contains(text(), "CatalystLayerCathode ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.013660" elapsed="0.000499"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:30.014274" elapsed="0.000084"/>
+</return>
+<msg time="2025-04-09T17:43:30.014578" level="INFO">${locator} = //label[contains(text(), "CatalystLayerCathode ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${locator}</var>
+<arg>${select_search_filter_clickable}</arg>
+<arg>${Filter}</arg>
+<tag>DONE</tag>
+<doc>Provides a Composed Locator</doc>
+<status status="PASS" start="2025-04-09T17:43:30.012973" elapsed="0.001656"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.014915" elapsed="0.318729"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.347301" elapsed="0.013718"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.346968" elapsed="0.014205"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:30.361698" level="INFO">Clicking element '//label[contains(text(), "CatalystLayerCathode ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.361435" elapsed="0.089227"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.336823" elapsed="0.114036"/>
+</kw>
+<kw name="Wait For Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:30.461136" level="INFO">${composed} = //label[contains(text(), "CatalystLayerCathode ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "456")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.460622" elapsed="0.000721"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.470675" elapsed="0.031169"/>
+</kw>
+<arg>${composed}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.470247" elapsed="0.031720"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:30.502033" elapsed="0.000045"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.459766" elapsed="0.042425"/>
+</kw>
+<kw name="Click on Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:30.508538" level="INFO">${composed} = //label[contains(text(), "CatalystLayerCathode ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "456")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.508153" elapsed="0.000445"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.519973" elapsed="0.025023"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.519673" elapsed="0.025495"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:30.546043" level="INFO">Clicking element '//label[contains(text(), "CatalystLayerCathode ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "456")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.545613" elapsed="0.051462"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.513549" elapsed="0.083685"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:30.597332" elapsed="0.000066"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.507279" elapsed="0.090315"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:30.768132" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.597887" elapsed="0.170395"/>
+</kw>
+<tag>DONE</tag>
+<doc>Select Search Filter as Value from Search Page</doc>
+<status status="PASS" start="2025-04-09T17:43:30.004047" elapsed="0.764386"/>
+</kw>
+<kw name="Select Search Filter &quot;Membrane ID&quot; as Value &quot;4343443&quot; from Search Page" owner="medium_level_keywords" source_name="Select Search Filter &quot;${Filter}&quot; as Value &quot;${Value}&quot; from Search Page">
+<kw name="Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:30.780475" level="INFO">${composed} = //label[contains(text(), "Membrane ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.780022" elapsed="0.000513"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:30.780663" elapsed="0.000071"/>
+</return>
+<msg time="2025-04-09T17:43:30.781004" level="INFO">${locator} = //label[contains(text(), "Membrane ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${locator}</var>
+<arg>${select_search_filter_clickable}</arg>
+<arg>${Filter}</arg>
+<tag>DONE</tag>
+<doc>Provides a Composed Locator</doc>
+<status status="PASS" start="2025-04-09T17:43:30.779280" elapsed="0.001798"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:30.781413" elapsed="0.280575"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.079623" elapsed="0.015161"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.079123" elapsed="0.015807"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:31.095450" level="INFO">Clicking element '//label[contains(text(), "Membrane ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.095188" elapsed="0.103276"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.067829" elapsed="0.130803"/>
+</kw>
+<kw name="Wait For Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:31.208913" level="INFO">${composed} = //label[contains(text(), "Membrane ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "4343443")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.208493" elapsed="0.000463"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.225596" elapsed="0.025251"/>
+</kw>
+<arg>${composed}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.225166" elapsed="0.025789"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:31.251025" elapsed="0.000046"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.207161" elapsed="0.044023"/>
+</kw>
+<kw name="Click on Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:31.258246" level="INFO">${composed} = //label[contains(text(), "Membrane ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "4343443")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.257561" elapsed="0.000745"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.276285" elapsed="0.020178"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.275765" elapsed="0.020813"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:31.297022" level="INFO">Clicking element '//label[contains(text(), "Membrane ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "4343443")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.296827" elapsed="0.043389"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.265990" elapsed="0.074495"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:31.340666" elapsed="0.000130"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.255184" elapsed="0.085842"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:31.541379" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.341504" elapsed="0.200021"/>
+</kw>
+<tag>DONE</tag>
+<doc>Select Search Filter as Value from Search Page</doc>
+<status status="PASS" start="2025-04-09T17:43:30.769193" elapsed="0.772481"/>
+</kw>
+<kw name="Select Search Filter &quot;Cell ID&quot; as Value &quot;SDC 5 - 022025&quot; from Search Page" owner="medium_level_keywords" source_name="Select Search Filter &quot;${Filter}&quot; as Value &quot;${Value}&quot; from Search Page">
+<kw name="Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:31.546037" level="INFO">${composed} = //label[contains(text(), "Cell ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.545826" elapsed="0.000242"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:31.546129" elapsed="0.000038"/>
+</return>
+<msg time="2025-04-09T17:43:31.546275" level="INFO">${locator} = //label[contains(text(), "Cell ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div</msg>
+<var>${locator}</var>
+<arg>${select_search_filter_clickable}</arg>
+<arg>${Filter}</arg>
+<tag>DONE</tag>
+<doc>Provides a Composed Locator</doc>
+<status status="PASS" start="2025-04-09T17:43:31.545520" elapsed="0.000791"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.546441" elapsed="0.280282"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.844349" elapsed="0.015493"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.843840" elapsed="0.016109"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:31.860356" level="INFO">Clicking element '//label[contains(text(), "Cell ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/parent::div'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.860131" elapsed="0.102042"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.832503" elapsed="0.129829"/>
+</kw>
+<kw name="Wait For Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:31.968120" level="INFO">${composed} = //label[contains(text(), "Cell ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "SDC 5 - 022025")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.967883" elapsed="0.000270"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.983079" elapsed="0.027975"/>
+</kw>
+<arg>${composed}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.982489" elapsed="0.028700"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:32.011345" elapsed="0.000061"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:31.967470" elapsed="0.044147"/>
+</kw>
+<kw name="Click on Composed Locator made with two inputs" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:32.015939" level="INFO">${composed} = //label[contains(text(), "Cell ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "SDC 5 - 022025")]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % ('${text1}', '${text2}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.015681" elapsed="0.000293"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.032525" elapsed="0.019616"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.032132" elapsed="0.020155"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:32.052902" level="INFO">Clicking element '//label[contains(text(), "Cell ID")]/ancestor::div[@class = "mx-grid-search-item"]//select/option[contains(text(), "SDC 5 - 022025")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.052632" elapsed="0.048042"/>
+</kw>
+<arg>${composed}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.019324" elapsed="0.081497"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:32.100916" elapsed="0.000062"/>
+</return>
+<arg>${select_search_filter_option}</arg>
+<arg>${Filter}</arg>
+<arg>${Value}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator`` and its text.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.015277" elapsed="0.085866"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:32.284535" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.101392" elapsed="0.183290"/>
+</kw>
+<tag>DONE</tag>
+<doc>Select Search Filter as Value from Search Page</doc>
+<status status="PASS" start="2025-04-09T17:43:31.542237" elapsed="0.742607"/>
+</kw>
+<kw name="Search the Applied Filters from Search Page" owner="medium_level_keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${search_grid_search}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.285709" elapsed="0.293142"/>
+</kw>
+<kw name="Click On Locator" owner="low_level_keywords">
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.592442" elapsed="0.014441"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.592092" elapsed="0.014934"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:32.607563" level="INFO">Clicking element '//div[@class = "mx-grid-searchbar"]//button[text() = "Search"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.607287" elapsed="0.073734"/>
+</kw>
+<arg>${search_grid_search}</arg>
+<tag>DONE</tag>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.585690" elapsed="0.095506"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.694023" elapsed="0.017032"/>
+</kw>
+<arg>${search_grid_search}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.693664" elapsed="0.017500"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:32.863516" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.711344" elapsed="0.152313"/>
+</kw>
+<tag>DONE</tag>
+<doc>Search the Applied Filters from Search Page</doc>
+<status status="PASS" start="2025-04-09T17:43:32.285291" elapsed="0.578496"/>
+</kw>
+<kw name="Verify the Result after applying the Search Filters via the Super ID &quot;P0019-E0001-M0001&quot;" owner="medium_level_keywords" source_name="Verify the Result after applying the Search Filters via the Super ID &quot;${Super_ID}&quot;">
+<kw name="Composed Locator" owner="low_level_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-09T17:43:32.871390" level="INFO">${composed} = //tr[@class = "mx-name-index-0"]//div[text() = "P0019-E0001-M0001"]</msg>
+<var>${composed}</var>
+<arg>'${locator}' % '${text}'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.871014" elapsed="0.000455"/>
+</kw>
+<return>
+<value>${composed}</value>
+<status status="PASS" start="2025-04-09T17:43:32.871676" elapsed="0.000141"/>
+</return>
+<msg time="2025-04-09T17:43:32.872041" level="INFO">${locator} = //tr[@class = "mx-name-index-0"]//div[text() = "P0019-E0001-M0001"]</msg>
+<var>${locator}</var>
+<arg>${search_result_superid}</arg>
+<arg>${Super_ID}</arg>
+<tag>DONE</tag>
+<doc>Provides a Composed Locator</doc>
+<status status="PASS" start="2025-04-09T17:43:32.870429" elapsed="0.001661"/>
+</kw>
+<kw name="Wait For Locator" owner="low_level_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.889289" elapsed="0.021756"/>
+</kw>
+<arg>${locator}</arg>
+<tag>DONE</tag>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.888538" elapsed="0.022723"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-09T17:43:32.911470" elapsed="0.293209"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:33.205268" level="INFO">Double clicking element '//tr[@class = "mx-name-index-0"]//div[text() = "P0019-E0001-M0001"]'.</msg>
+<arg>${locator}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T17:43:33.204975" elapsed="0.313443"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-09T17:43:33.663059" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-61.png"&gt;&lt;img src="selenium-screenshot-61.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-09T17:43:33.518709" elapsed="0.144483"/>
+</kw>
+<tag>DONE</tag>
+<doc>Verify the Result after applying the Search Filters via the Super ID</doc>
+<status status="PASS" start="2025-04-09T17:43:32.864305" elapsed="0.799019"/>
+</kw>
+<status status="PASS" start="2025-04-09T17:43:11.377290" elapsed="22.286355"/>
+</test>
+<status status="PASS" start="2025-04-09T17:43:10.924545" elapsed="22.739934"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SF US22" id="s1" pass="1" fail="0" skip="0">SF US22</stat>
+</suite>
+</statistics>
 <errors>
-<msg time="2025-04-08T13:49:05.536670" level="WARN">The chromedriver version (134.0.6998.35) detected in PATH at D:\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.42); currently, chromedriver 135.0.7049.42 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2025-04-08T13:49:25.774276" level="ERROR">Execution stopped by user.</msg>
+<msg time="2025-04-09T17:43:11.724409" level="WARN">The chromedriver version (134.0.6998.35) detected in PATH at D:\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.84); currently, chromedriver 135.0.7049.84 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

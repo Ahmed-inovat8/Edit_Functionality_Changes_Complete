@@ -327,6 +327,104 @@ Navigate to the Available Resume from the Ongoing MEA
     Click On Locator    ${resume_universal}
     Capture Page Screenshot
 
+Navigate to Search from MEA Dashboard Page
+    [Documentation]    Navigate to Search from MEA Dashboard Page
+    ...
+    ...    == Description: ==
+    ...    Navigate to Search from MEA Dashboard Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    Scroll Element Into View    ${mea_search}
+    Click On Locator    ${mea_search}
+    Wait For Locator    ${mea_search_node}
+    Capture Page Screenshot
+
+
+
+Search the Applied Filters from Search Page
+    [Documentation]    Search the Applied Filters from Search Page
+    ...
+    ...    == Description: ==
+    ...    Search the Applied Filters from Search Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    Scroll Element Into View    ${search_grid_search}
+    Click On Locator    ${search_grid_search}
+    Wait For Locator    ${search_grid_search}
+    Capture Page Screenshot
+
+
+
+Input Search Filter "${Filter}" as Value "${Value}" from Search Page
+    [Documentation]    Input Search Filter as Value from Search Page
+    ...
+    ...    == Description: ==
+    ...    Input Search Filter as Value from Search Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    
+    ${locator} =   Composed Locator    ${input_search_filter_clickable}    ${Filter}
+    Scroll Element Into View    ${locator}
+    Click On Locator    ${locator}
+    Send Keys to Composed Locator    ${input_search_filter}    ${Filter}    ${Value}
+    Press Keys    NONE    ENTER
+    Capture Page Screenshot
+
+
+Select Search Filter "${Filter}" as Value "${Value}" from Search Page
+    [Documentation]    Select Search Filter as Value from Search Page
+    ...
+    ...    == Description: ==
+    ...    Select Search Filter as Value from Search Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    ${locator} =   Composed Locator    ${select_search_filter_clickable}    ${Filter}
+    Scroll Element Into View    ${locator}
+    Click On Locator    ${locator}
+    Wait For Composed Locator made with two inputs    ${select_search_filter_option}    ${Filter}    ${Value}
+    Click on Composed Locator made with two inputs    ${select_search_filter_option}    ${Filter}    ${Value}
+    Capture Page Screenshot
+
+
+Verify the Result after applying the Search Filters via the Super ID "${Super_ID}"
+    [Documentation]    Verify the Result after applying the Search Filters via the Super ID
+    ...
+    ...    == Description: ==
+    ...    Verify the Result after applying the Search Filters via the Super ID
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    ${locator} =   Composed Locator    ${search_result_superid}    ${Super_ID}
+    Wait For Locator    ${locator}
+    Scroll Element Into View    ${locator}
+    Double Click Element    ${locator}
+    Capture Page Screenshot
+
+
 
 Delete all Projects from Dashboard
     [Documentation]    Create a New Project from Dashboard
