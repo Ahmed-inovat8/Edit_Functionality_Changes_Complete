@@ -127,7 +127,7 @@ Navigate to Master Data Page
     [Tags]    DONE
 
     
-    Click On Locator    ${sf_logo}
+    # Click On Locator    ${sf_logo}
     Wait For Locator    ${master_data_navigation}
     Click On Locator    ${master_data_navigation}
     Wait For Locator    ${master_data_header}
@@ -464,7 +464,7 @@ Hover over all Projects from Dashboard
     FOR    ${index}    IN RANGE    2    ${numbers}
         ${locator} =   Composed Locator    ${entries_navigation_composed}    ${index}
         Mouse Over    ${locator}
-        Sleep    0.5
+        Sleep    0.2
     END
     Capture Page Screenshot
 
@@ -1969,7 +1969,7 @@ From Master Data Page, Hover over the following Attribute: "${Attribute}"
     Wait For Locator    ${locator}
     Scroll Element Into View    ${locator}
     Mouse Over    ${locator}
-    Sleep    0.5
+    Sleep    0.2
     Capture Page Screenshot
 
 

@@ -74,7 +74,7 @@ ${del_proceed}     //button[text() = "Proceed"]
 ${del_progress_msg}     //div[text() = "Deleting in progress... Please wait while the operation completes."]
 ${project_button}     //span[@class = "mx-icon-lined mx-icon-blocks"]
 ${project_id}     //span[text() = "%s"]
-${master_data_navigation}     //a[text() = " Master Data"]
+${master_data_navigation}     //a[contains(text(), "Master Data")]/span
 ${mea_dashboard_navigation}     //a[text() = " MEA"]
 ${system_configuration_icon}     //span[@class = "mx-icon-lined mx-icon-wrench"]
 ${system_configuration_option}     //a[@title = "%s"]
