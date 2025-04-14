@@ -442,9 +442,32 @@ Delete all Projects from Dashboard
     FOR    ${index}    IN RANGE    ${numbers}
         Delete a Project from Dashboard
         Wait Until Element Is Not Visible    ${del_progress_msg}
-        Sleep    5
+        Sleep    2
     END
     Capture Page Screenshot
+
+
+Hover over all Projects from Dashboard
+    [Documentation]    Hover over all Projects from Dashboard
+    ...
+    ...    == Description: ==
+    ...    Hover over all Projects from Dashboard
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    ${Elements} =   Get WebElements    ${entries_navigation}
+    ${numbers} =   Get Length    ${Elements}
+    Convert To Integer    ${numbers}
+    ${numbers} =   Evaluate    ${numbers} + 2
+    FOR    ${index}    IN RANGE    2    ${numbers}
+        ${locator} =   Composed Locator    ${entries_navigation_composed}    ${index}
+        Mouse Over    ${locator}
+        Sleep    0.5
+    END
+    Capture Page Screenshot
+
 
 Delete a Project from Dashboard
     [Documentation]    Create a New Project from Dashboard
@@ -735,8 +758,8 @@ Delete MEA with ID "${ID}" from Project Initiation Page
         Press Keys    NONE    ARROW_RIGHT
         Sleep    0.05
     END
-    Wait For Locator    ${universal_view_results}
-    Click On Locator    ${universal_view_results}
+    Wait For Locator    ${universal_result}
+    Click On Locator    ${universal_result}
     Wait For Locator    ${header_results_page}
     Capture Page Screenshot
 
@@ -756,14 +779,11 @@ Navigate to View Results from Select Experiment Page
     
     Wait For Locator    ${header_project_id}
     Click On Locator    ${header_project_id}
-    Scroll To End Of Page
+    # Scroll To End Of Page
+    Wait For Locator    ${universal_result}
+    Scroll Element Into View    ${universal_result}
     Capture Page Screenshot
-    FOR    ${index}    IN RANGE    50
-        Press Keys    NONE    ARROW_RIGHT
-        Sleep    0.05
-    END
-    Wait For Locator    ${universal_view_results}
-    Click On Locator    ${universal_view_results}
+    Click On Locator    ${universal_result}
     Wait For Locator    ${header_results_page}
     Capture Page Screenshot
 
@@ -1302,7 +1322,7 @@ If error select file with "${Number1}" and "${Number2}" iterations again for DC 
     ELSE
         Wait Until Element Is Not Visible    ${ok_universal}   
     END
-    
+
 
 
 
@@ -1661,9 +1681,10 @@ Navigate to Sora Fuel Folder on Google Drive
     [Tags]    DONE
     
 
-    Sleep    5
+    Sleep    2
+    Press Keys    NONE    ARROW_RIGHT
     Press Keys    NONE    ENTER
-    Sleep    5 
+    Sleep    2
     Capture Page Screenshot
 
 
@@ -1934,6 +1955,24 @@ From Master Data Page, Navigate to following Attribute: "${Attribute}"
     Capture Page Screenshot
 
 
+From Master Data Page, Hover over the following Attribute: "${Attribute}"
+    [Documentation]    From Master Data Page, Hover over the following Attribute 
+    ...
+    ...    == Description: ==
+    ...    From Master Data Page, Hover over the following Attribute
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    ${locator} =   Composed Locator    ${attribute_master_date}    ${Attribute}
+    Wait For Locator    ${locator}
+    Scroll Element Into View    ${locator}
+    Mouse Over    ${locator}
+    Sleep    0.5
+    Capture Page Screenshot
+
+
 
 Create New Master Data Attribute "${New_Attribute}"
     [Documentation]    Create New Master Data Attribute 
@@ -1994,6 +2033,7 @@ Cancel Out From Creating a New Attribute For Master Data
 
     [Tags]    DONE
 
+    
     Wait For Locator    ${cancel_universal}
     Click On Locator    ${cancel_universal}
     Wait For Locator    ${ok_universal}
@@ -2092,6 +2132,7 @@ Verify Error "${Error}" being displayed for the Category "${Category}"
     [Tags]    DONE
     
 
+    Sleep    2
     Wait For Composed Locator    ${category_results_page}    ${Category}
     Click On Composed Locator    ${category_results_page}    ${Category}
     Wait For Composed Locator    ${category_error}    ${Error}
@@ -2110,9 +2151,10 @@ Verify Error "${Error}" being displayed for the Sub-Category EIS Results
 
     [Tags]    DONE
     
-
+    Sleep    2
     Wait For Composed Locator    ${category_results_page}    Potentiostat Readings
     Click On Composed Locator    ${category_results_page}    Potentiostat Readings
+    Sleep    2
     Click On Locator    ${sub_category_eis_results}
     Wait For Composed Locator    ${category_error}    ${Error}
     Capture Page Screenshot
@@ -2148,6 +2190,7 @@ Enter ID "${ID}" for the Master Data Attribute "${Attribute}"
     [Tags]    DONE
     
 
+    Sleep    2
     Wait For Locator    ${id_master_date_attributes}
     Click On Locator    ${id_master_date_attributes}
     Press Keys    NONE    CTRL+A
@@ -2211,9 +2254,6 @@ Enter value "${value}" for Element Components for the Master Data Attribute "${A
 
 
 
-
-
-
 Enter value "${value}" for Element "${Element}" for the Master Data Attribute "${Attribute}"
     [Documentation]    Enter value for Element for the Master Data Attribute
     ...
@@ -2238,6 +2278,35 @@ Enter value "${value}" for Element "${Element}" for the Master Data Attribute "$
     Send Keys To Locator    ${locator}    ${value}
     Press Keys    NONE    ENTER
     Capture Page Screenshot
+
+
+Enter value "${value}" for Element Deposition by for the Master Data Attribute Catalyst Layer Cathode
+    [Documentation]    Enter value for Element for the Master Data Attribute
+    ...
+    ...    == Description: ==
+    ...    Enter value for Element for the Master Data Attribute
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+
+    ${locator} =   Composed Locator    ${specific_master_data_attribute_clickable}    Deposition by
+    Wait For Locator    ${locator}
+    Scroll Element Into View    ${locator}
+    Click On Locator    ${locator}
+    ${locator2} =   Composed Locator    ${specific_master_date_attributes}    Deposition by
+    Press Keys    NONE    CTRL+A
+    Sleep    0.5
+    Press Keys    NONE    BACKSPACE
+    Sleep    0.5
+    Send Keys To Locator    ${locator2}    ${value}
+    Press Keys    NONE    ENTER
+    Capture Page Screenshot
+
+
 
 
 

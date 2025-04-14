@@ -55,12 +55,12 @@ US14 Testing IDs and Save Functionality from Master Data
 
     From Master Data Page, Navigate to following Attribute: "Catalyst Layer Cathode"
     Create New Master Data Attribute "New Cataylst layer cathode"
-    Enter ID "1234" for the Master Data Attribute "Catalyst Layer Cathode ID"
+    Enter ID "2255" for the Master Data Attribute "Catalyst Layer Cathode ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
     Enter ID "7654321" for the Master Data Attribute "Catalyst Layer Cathode ID"
     Enter value "Ahmed" for Element Manufactured by for the Master Data Attribute "Catalyst Layer Cathode"
-    Enter value "Harry" for Element "Deposition By" for the Master Data Attribute "Catalyst Layer Cathode"
+    Enter value "Ammad" for Element Deposition by for the Master Data Attribute Catalyst Layer Cathode
     Save Changes from Creating a New Master Data Attribute
     Scroll To Delete for Master Data
     Delete the Master Data Entry for ID "7654321"
@@ -95,9 +95,9 @@ US14 Testing IDs and Save Functionality from Master Data
     Enter ID "12" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
-    Enter ID "1234" for the Master Data Attribute "ID"
+    Enter ID "2255" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for ID "1234"
+    Delete the Master Data Entry for ID "2255"
 
 
     From Master Data Page, Navigate to following Attribute: "GDL Anode"
@@ -105,10 +105,10 @@ US14 Testing IDs and Save Functionality from Master Data
     Enter ID "12" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
-    Enter ID "1234" for the Master Data Attribute "ID"
+    Enter ID "2255" for the Master Data Attribute "ID"
     Enter value "1234" for Element "Manufacturer" for the Master Data Attribute "GDL Anode"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for ID "1234"
+    Delete the Master Data Entry for ID "2255"
 
 
     From Master Data Page, Navigate to following Attribute: "PTL Cathode"
@@ -116,10 +116,10 @@ US14 Testing IDs and Save Functionality from Master Data
     Enter ID "12" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
-    Enter ID "1234" for the Master Data Attribute "ID"
+    Enter ID "2255" for the Master Data Attribute "ID"
     Enter value "1234" for Element "Manufacturer" for the Master Data Attribute "PTL Cathode"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for ID "1234"
+    Delete the Master Data Entry for ID "2255"
 
 
     From Master Data Page, Navigate to following Attribute: "GDL Cathode"
@@ -127,9 +127,9 @@ US14 Testing IDs and Save Functionality from Master Data
     Enter ID "12" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
-    Enter ID "1234" for the Master Data Attribute "ID"
+    Enter ID "2255" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for ID "1234"
+    Delete the Master Data Entry for ID "2255"
 
 
     From Master Data Page, Navigate to following Attribute: "Additive Layer Anode"
@@ -137,13 +137,13 @@ US14 Testing IDs and Save Functionality from Master Data
     Enter ID "12" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
-    Enter ID "1234" for the Master Data Attribute "ID"
+    Enter ID "2255" for the Master Data Attribute "ID"
     Enter value "1234" for Element "Location" for the Master Data Attribute "Additive Layer anode"
     Enter value "1234" for Element "Composition" for the Master Data Attribute "Additive Layer anode"
     Enter value "1234" for Element "Cure time (min)" for the Master Data Attribute "Additive Layer anode"
     Enter value "1234" for Element "Quantity (μl)" for the Master Data Attribute "Additive Layer anode"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for ID "1234"
+    Delete the Master Data Entry for ID "2255"
 
 
     From Master Data Page, Navigate to following Attribute: "Additive Layer Cathode"
@@ -151,9 +151,9 @@ US14 Testing IDs and Save Functionality from Master Data
     Enter ID "12" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
-    Enter ID "1234" for the Master Data Attribute "ID"
+    Enter ID "2255" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for ID "1234"
+    Delete the Master Data Entry for ID "2255"
 
 
     From Master Data Page, Navigate to following Attribute: "Test Station"
@@ -169,12 +169,12 @@ US14 Testing IDs and Save Functionality from Master Data
     Enter ID "12" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
-    Enter ID "1234" for the Master Data Attribute "ID"
+    Enter ID "2255" for the Master Data Attribute "ID"
     For Dropdowns Enter value "Yes" for Element "Captured solution" for the Master Data Attribute "Anolyte"
     Enter value "K2CO3 3 M" for Element Components for the Master Data Attribute "Anolyte"
     Enter value "123" for Element "Manufacturer" for the Master Data Attribute "Anolyte"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for ID "1234"
+    Delete the Master Data Entry for ID "2255"
 
 
     From Master Data Page, Navigate to following Attribute: "Catholyte"
@@ -182,11 +182,11 @@ US14 Testing IDs and Save Functionality from Master Data
     Enter ID "12" for the Master Data Attribute "ID"
     Save Changes from Creating a New Master Data Attribute
     Verify Validation Error Message
-    Enter ID "1234" for the Master Data Attribute "ID"
+    Enter ID "2255" for the Master Data Attribute "ID"
     Enter value "K2CO3 3 M" for Element Components for the Master Data Attribute "Catholyte"    
     Enter value "123" for Element "Manufacturer" for the Master Data Attribute "Catholyte"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for ID "1234"
+    Delete the Master Data Entry for ID "2255"
 
 
     From Master Data Page, Navigate to following Attribute: "Component"
@@ -198,25 +198,25 @@ US14 Testing IDs and Save Functionality from Master Data
 
     From Master Data Page, Navigate to following Attribute: "Gas Chromatography"
     Create New Master Data Attribute "New GC configuration"
-    Enter value "Something" for Element "Label" for the Master Data Attribute "Edit GC Configuration"
-    Enter value "1234" for Element "Model" for the Master Data Attribute "Edit GC Configuration"
+    Enter value "SomethingAnything" for Element "Label" for the Master Data Attribute "Edit GC Configuration"
+    Enter value "2255" for Element "Model" for the Master Data Attribute "Edit GC Configuration"
     Enter value "12" for Element "Lab id" for the Master Data Attribute "Edit GC Configuration"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for Label "Something"
+    Delete the Master Data Entry for Label "SomethingAnything"
 
     
     From Master Data Page, Navigate to following Attribute: "DC Power Supply"
     Create New Master Data Attribute "New DC power supply configuration"
-    Enter value "Something" for Element "Label" for the Master Data Attribute "Edit DC Power Supply"
+    Enter value "SomethingAnything" for Element "Label" for the Master Data Attribute "Edit DC Power Supply"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for Name "Something"
+    Delete the Master Data Entry for Name "SomethingAnything"
     
     
     From Master Data Page, Navigate to following Attribute: "Electrochemical Lab Potentiostat"
     Create New Master Data Attribute "New EC lab P stat configuration"
-    Enter value "Something" for Element "Label" for the Master Data Attribute "Edit EC lab P stat configuration"
+    Enter value "SomethingAnything" for Element "Label" for the Master Data Attribute "Edit EC lab P stat configuration"
     Enter value "1234" for Element "Model" for the Master Data Attribute "Edit EC lab P stat configuration"
     Save Changes from Creating a New Master Data Attribute
-    Delete the Master Data Entry for Label "Something"   
+    Delete the Master Data Entry for Label "SomethingAnything"   
 
    [Teardown]    Close Browser

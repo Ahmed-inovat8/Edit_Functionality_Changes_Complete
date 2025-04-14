@@ -4,7 +4,7 @@ Resource          ../resources/medium_level_keywords.resource
 Resource    ../resources/high_level_keywords.resource
 
 *** Test Cases ***
-US3 Creating Experiments Against Multiple MEAs and Verifying MEAs
+US4 Creating Experiments Against Multiple MEAs and Verifying MEAs
     Login to Sora Fuel
     Create a New Project from Dashboard
     Enter all the following credentials in New Project Page "Experiments against MEAs", "Automation Testing", "Ahmed"
@@ -20,6 +20,7 @@ US3 Creating Experiments Against Multiple MEAs and Verifying MEAs
     Select the following Value "-1032ur09wu" for the "Catalyst Layer Anode ID" from Experiment Initiation page
     Select the following Value "456" for the "Catalyst Layer Cathode ID" from Experiment Initiation page
     Save Changes from Initiation Page
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Navigate to Dashboard Page
     Navigate to the MEA Page for "P0003"
@@ -31,6 +32,7 @@ US3 Creating Experiments Against Multiple MEAs and Verifying MEAs
     Select the following Value "-1032ur09wu" for the "Catalyst Layer Anode ID" from Experiment Initiation page
     Select the following Value "456" for the "Catalyst Layer Cathode ID" from Experiment Initiation page
     Save Changes from Initiation Page
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Navigate to Dashboard Page
     Navigate to the MEA Page for "P0003"
@@ -42,6 +44,7 @@ US3 Creating Experiments Against Multiple MEAs and Verifying MEAs
     Select the following Value "-1032ur09wu" for the "Catalyst Layer Anode ID" from Experiment Initiation page
     Select the following Value "456" for the "Catalyst Layer Cathode ID" from Experiment Initiation page
     Save Changes from Initiation Page
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Navigate to Dashboard Page
     Navigate to the MEA Page for "P0003"
@@ -53,6 +56,7 @@ US3 Creating Experiments Against Multiple MEAs and Verifying MEAs
     Select the following Value "-1032ur09wu" for the "Catalyst Layer Anode ID" from Experiment Initiation page
     Select the following Value "456" for the "Catalyst Layer Cathode ID" from Experiment Initiation page
     Save Changes from Initiation Page
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Navigate to Dashboard Page
     Navigate to the MEA Page for "P0003"

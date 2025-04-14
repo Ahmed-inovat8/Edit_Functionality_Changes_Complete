@@ -5,7 +5,7 @@ Resource          ../resources/high_level_keywords.resource
 Resource    ../resources/db_keywords.resource
 
 *** Test Cases ***
-US7 Verifying Assosciayion MEA to Test and to Master Data/ ID Verification
+US7 Verifying Assosciation MEA to Test and to Master Data/ ID Verification
     Login to Sora Fuel while adding Bezzomate
     Create a New Project from Dashboard
     Enter all the credentials in New Project Page "Automation Test", "Testing via Robot Framework", "2/20/2025", "Ahmed"
@@ -33,6 +33,7 @@ US7 Verifying Assosciayion MEA to Test and to Master Data/ ID Verification
     Navigate to the Category "Database" from Bezzomate
     Verify 1 to Many Association between Anolyte/Catholyte with "4" Components
     Unaccess Bezzomate
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Refresh Feed
     Navigate to the MEA Page for "P0009"
@@ -57,5 +58,6 @@ US7 Verifying Assosciayion MEA to Test and to Master Data/ ID Verification
     Navigate to the Category "Database" from Bezzomate
     Verify 1 to Many Association between Anolyte/Catholyte with "4" Components
     Unaccess Bezzomate
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     [Teardown]    Close Test for Sora Fuel

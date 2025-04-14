@@ -24,11 +24,11 @@ US6 MEA to MEA Configuration to Master Data/ ID Verification
     Access Bezzomate
     Navigate to the Category "State" from Bezzomate
     Verify that the new MEA for Category "MEA" has the ID "P0009-E0001-M0001" in the database
-    Verify that the new MEA for Category "Membrane" has the ID "12" in the database
+    Verify that the new MEA for Category "Membrane" has the ID "4343443" in the database
     Verify that the new MEA for Category Catalyst Layer "CatalystLayerAnode" has the ID "-1032ur09wu" in the database
     Verify that the new MEA for Category Catalyst Layer "PTLAnode" has the ID "Ni Foam" in the database
     Verify that the new MEA for Category Catalyst Layer "GDLAnode" has the ID "none" in the database
-    Verify that the new MEA for Category Flow Field "FlowFieldAnode" has the ID "Mystery" in the database
+    Verify that the new MEA for Category Flow Field "FlowFieldAnode" has the ID "123455" in the database
     Verify that the new MEA for Category Catalyst Layer "AdditiveLayerAnode" has the ID "12345" in the database    
     Verify that the new MEA for Category Catalyst Layer "CataylstLayerCathode" has the ID "456" in the database
     Verify that the new MEA for Category Catalyst Layer "PTLCathode" has the ID "none" in the database
@@ -51,11 +51,11 @@ US6 MEA to MEA Configuration to Master Data/ ID Verification
     Access Bezzomate
     Navigate to the Category "State" from Bezzomate
     Verify that the new MEA for Category "MEA" has the ID "P0009-E0001-M0002" in the database
-    Verify that the new MEA for Category "Membrane" has the ID "12" in the database
+    Verify that the new MEA for Category "Membrane" has the ID "4343443" in the database
     Verify that the new MEA for Category Catalyst Layer "CatalystLayerAnode" has the ID "-1032ur09wu" in the database
     Verify that the new MEA for Category Catalyst Layer "PTLAnode" has the ID "Ni Foam" in the database
     Verify that the new MEA for Category Catalyst Layer "GDLAnode" has the ID "none" in the database
-    Verify that the new MEA for Category Flow Field "FlowFieldAnode" has the ID "Mystery" in the database
+    Verify that the new MEA for Category Flow Field "FlowFieldAnode" has the ID "123455" in the database
     Verify that the new MEA for Category Catalyst Layer "AdditiveLayerAnode" has the ID "12345" in the database    
     Verify that the new MEA for Category Catalyst Layer "CataylstLayerCathode" has the ID "456" in the database
     Verify that the new MEA for Category Catalyst Layer "PTLCathode" has the ID "none" in the database

@@ -5,15 +5,16 @@ Resource          ../resources/high_level_keywords.resource
 
 *** Test Cases ***
 US1 General Testing till the completion of the Project via Drive
+    Login to Sora Fuel
     Create a New Project from Dashboard
-    Enter all the following credentials in New Project Page "Automation Test", "Testing MEA Edit Functionality", "Ahmed"
-    Enter a New Project ID "19" from New Project Page and Save Changes
-    Navigate to the MEA Page for "P0019"
+    Enter all the following credentials in New Project Page "Automation Test", "Testing Project Completion", "Ahmed"
+    Enter a New Project ID "9" from New Project Page and Save Changes
+    Navigate to the MEA Page for "P0009"
     Initiate MEA
     Create New Experiment "1" from Select Experiment Page
     Start New Experiment "1" from Select Experiment Page
     Create a New MEA UserInput ID "1" from Initiation Page
-    Verify MEA Super ID as "P0019-E0001-M0001" from Experiment Initiation Page
+    Verify MEA Super ID as "P0009-E0001-M0001" from Experiment Initiation Page
     Set Fabricated by to "Ahmed" from MEA Details on Initiation Page
     Select the following Value "-1032ur09wu" for the "Catalyst Layer Anode ID" from Experiment Initiation page
     Select the following Value "456" for the "Catalyst Layer Cathode ID" from Experiment Initiation page

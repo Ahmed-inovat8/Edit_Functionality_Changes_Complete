@@ -16,6 +16,7 @@ ${resume_universal}     //button[text() = "Resume"]
 ${https_advance}     //button[contains(text(), "Advanced")]
 ${https_proceed}     //a[text() = "Proceed to sorafuel.inovat8.com (unsafe)"]
 ${universal_view_results}     //button[text() = "View Results"]
+${universal_result}     //button[text() = "Result"]
 ${delete_universal}     //button[text() = "Delete"]
 ${skip_universal}     //button[text() = "Skip"]
 ${loader_universal}     //div[@class= "mx-progress mx-progress-empty"]
@@ -77,6 +78,10 @@ ${master_data_navigation}     //a[text() = " Master Data"]
 ${mea_dashboard_navigation}     //a[text() = " MEA"]
 ${system_configuration_icon}     //span[@class = "mx-icon-lined mx-icon-wrench"]
 ${system_configuration_option}     //a[@title = "%s"]
+${entries_navigation}     //div[@class = "tr"]/div[contains(@class, "clickable align-column-left")][1]
+${entries_navigation_composed}     //div[@class = "tr"][%s]/div[contains(@class, "clickable align-column-left")][1]
+
+
 
 
 
@@ -233,6 +238,7 @@ ${del_master_data_label}     //span[text() = "%s"]/parent::div/following-sibling
 ${grid_membrane_dropdown}     //label[text() = "Grid location"]/parent::div//select
 ${grid_membrane_string}     //label[text() = "Grid location"]/parent::div//input
 ${specific_master_date_attributes}     //label[contains(text(), "%s")]/parent::div//input
+${specific_master_data_attribute_clickable}     //label[contains(text(), "%s")]/parent::div
 ${dropdown_master_date_attributes}     //label[contains(text(), "%s")]/parent::div//select
 ${dropdown_option_master_date}     //option[text() = "%s"]
 ${dd_icon_option_master_date}     //label[contains(text(), "Manufactured by")]/parent::div//div[@class = "widget-combobox-down-arrow"]
@@ -246,7 +252,7 @@ ${new_local_user}     //button[text() = "New local user"]
 ${new_account_header}     //h4[text() = "New Account"]
 ${new_user_input fields}     //label[text() = "%s"]/parent::div//input
 ${header_select_user_roles}     //h4[text() = "Select user roles"]
-${option_user_role}     //tr[@class = "mx-name-index-2"]//div[text() = "User"]
+${option_user_role}     //tr[@class = "mx-name-index-1"]/td[@data-id = "142"]//div[text() = "User"]
 ${password_error}     //p[text() = "Password has an issue: Password does not meet password policy criteria:"]
 ${users_table}     //div[text() = "%s"]
 

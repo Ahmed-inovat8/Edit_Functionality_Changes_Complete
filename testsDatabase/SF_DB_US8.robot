@@ -19,6 +19,7 @@ US8 Checking the Resume and Skip Functionalities Via Database
     Select the following Value "-1032ur09wu" for the "Catalyst Layer Anode ID" from Experiment Initiation page
     Select the following Value "456" for the "Catalyst Layer Cathode ID" from Experiment Initiation page
     Save Changes from Initiation Page
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Navigate to Dashboard Page
     Navigate to the MEA Page for "P0009"

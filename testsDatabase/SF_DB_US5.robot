@@ -32,6 +32,7 @@ US5 Verifying Assosciayion MEA to Test and to Master Data/ Instance Verification
     Navigate to the Category "Database" from Bezzomate
     Verify 1 to Many Association between Anolyte/Catholyte with "4" Components
     Unaccess Bezzomate
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Refresh Feed
     Navigate to the MEA Page for "P0009"
@@ -55,5 +56,6 @@ US5 Verifying Assosciayion MEA to Test and to Master Data/ Instance Verification
     Navigate to the Category "Database" from Bezzomate
     Verify 1 to Many Association between Anolyte/Catholyte with "4" Components
     Unaccess Bezzomate
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     [Teardown]    Close Test for Sora Fuel

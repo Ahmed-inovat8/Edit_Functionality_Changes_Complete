@@ -20,6 +20,7 @@ US13 Verifying File Names for Completed Process After File Deletion
     Select the following Value "-1032ur09wu" for the "Catalyst Layer Anode ID" from Experiment Initiation page
     Select the following Value "456" for the "Catalyst Layer Cathode ID" from Experiment Initiation page
     Save Changes from Initiation Page
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Select Import type for Upload DC Power Supply to "Google Drive"
     Enter Label "STD" in Upload DC Power Supply Results Page
@@ -37,7 +38,6 @@ US13 Verifying File Names for Completed Process After File Deletion
     Browse Drive for the Run: "TCD Run :1"
     Select File with "7" iterations from Google Drive
     Set Time as "40" from GC File Upload
-    Save Changes from GC File Upload
     If error select file with "6" and "7" iterations again for DC Power Supply with Time "40"
     Save Changes from GC File Upload
     Navigate to PStat EIS Page from GC Files Page
@@ -47,7 +47,7 @@ US13 Verifying File Names for Completed Process After File Deletion
     Navigate to PStat LSV Page from PStat EIS Page
     Browse drive to Sorafuel Folder
     Select File with "5" iterations from Google Drive
-    Save and Close a Process   
+    Save and Close a Process      
     Delete Files
     Navigate to the MEA Page for "P0009"
     Navigate to View Results from Select Experiment Page

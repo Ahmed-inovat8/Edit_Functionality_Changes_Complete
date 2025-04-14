@@ -19,6 +19,7 @@ US9 Checking the Back and Next Functionalities Via Database
     Select the following Value "-1032ur09wu" for the "Catalyst Layer Anode ID" from Experiment Initiation page
     Select the following Value "456" for the "Catalyst Layer Cathode ID" from Experiment Initiation page
     Save Changes from Initiation Page
+    Add Test Details "Test Station" from Testing Details Page with Value "DSV1"
     Navigate to Upload DC Power Supply Results Page from Testing Details Page
     Select Import type for Upload DC Power Supply to "Google Drive"
     Enter Label "STD" in Upload DC Power Supply Results Page
