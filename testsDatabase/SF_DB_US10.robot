@@ -9,11 +9,11 @@ US10 Verifying Project Delete Functionality from Database
     Login to Sora Fuel while adding Bezzomate
     Access Bezzomate
     Navigate to the Category "Database" from Bezzomate
-    Verify that the readings for "DCPowerSupplyReading" are "181261"
+    Verify that the readings for "DCPowerSupplyReading" are "212934"
     Verify that the readings for "TCD" are "36"
     Verify that the readings for "FID" are "72"
     Verify that the readings for "EIS" are "1397"
-    Verify that the readings for "LSV" are "22479"
+    Verify that the readings for "LSV" are "22814"
     Unaccess Bezzomate
     Create a New Project from Dashboard
     Enter all the following credentials in New Project Page "Automation Test", "Testing MEA Edit Functionality", "Ahmed"
@@ -59,20 +59,19 @@ US10 Verifying Project Delete Functionality from Database
     Refresh Feed
     Access Bezzomate
     Navigate to the Category "Database" from Bezzomate
-    Verify that the readings for "DCPowerSupplyReading" are "184574"
+    Verify that the readings for "DCPowerSupplyReading" are "216247"
     Verify that the readings for "TCD" are "37"
     Verify that the readings for "FID" are "74"
     Verify that the readings for "EIS" are "1467"
-    Verify that the readings for "LSV" are "23404"
+    Verify that the readings for "LSV" are "23739"
     Unaccess Bezzomate
     Delete a Project from Dashboard
     Refresh Feed
     Access Bezzomate
-    Navigate to the Category "Database" from Bezzomate
-    Verify that the readings for "DCPowerSupplyReading" are "181261"
+    Verify that the readings for "DCPowerSupplyReading" are "212934"
     Verify that the readings for "TCD" are "36"
     Verify that the readings for "FID" are "72"
     Verify that the readings for "EIS" are "1397"
-    Verify that the readings for "LSV" are "22479"
+    Verify that the readings for "LSV" are "22814"
     Unaccess Bezzomate
     [Teardown]    Close Browser

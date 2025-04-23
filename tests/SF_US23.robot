@@ -4,7 +4,7 @@ Resource          ../resources/medium_level_keywords.resource
 Resource          ../resources/high_level_keywords.resource
 
 *** Test Cases ***
-US23 Verifying the Hover Functionality for the Dashboard and Master Data Page 
+US23 Verifying the Hover Functionality for Project Dashboard, MEA Dashboard and Master Data Page 
     Login to Sora Fuel
     Hover over all Projects from Dashboard
     Navigate to Master Data Page
@@ -27,4 +27,7 @@ US23 Verifying the Hover Functionality for the Dashboard and Master Data Page
     From Master Data Page, Hover over the following Attribute: "Gas Chromatography"
     From Master Data Page, Hover over the following Attribute: "DC Power Supply" 
     From Master Data Page, Hover over the following Attribute: "Electrochemical Lab Potentiostat"
+    Navigate to MEA Dashboard Page
+    Hover over all MEAs from MEA Dashboard Page
+
     [Teardown]    Close Browser

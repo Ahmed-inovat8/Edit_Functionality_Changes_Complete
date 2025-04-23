@@ -69,7 +69,7 @@ ${signin_button}     //button[text() = "Sign in"]
 ${new_project_button}     //button[text() = "New Project"]
 ${project_owner}     //span[text() = "%s"]/parent::div[@class = "td clickable align-column-left"]
 ${sf_logo}     //span[@class = "mx-link mx-name-sidebarToggle3 toggle-btn custom-button-css btn-lg btn-block"]
-${del_project}     //a[@class = "mx-link mx-name-actionButton3 DeleteIcon spacing-outer-left btn-lg"]
+${del_project}     //a[@class = "mx-link mx-name-actionButton3 DeleteIcon spacing-outer-left btn-lg"]/span
 ${del_proceed}     //button[text() = "Proceed"]
 ${del_progress_msg}     //div[text() = "Deleting in progress... Please wait while the operation completes."]
 ${project_button}     //span[@class = "mx-icon-lined mx-icon-blocks"]
@@ -197,6 +197,25 @@ ${p_stat_lsv_header}     //h1[text() = "Upload Potentiostat (PStat LSV) Results 
 ${mea_dashboard_header}     //h2[contains(text(), "MEA Dashboard")]
 ${mea_dashboard_superid}     //div[text() = "%s"]/ancestor::tr
 ${mea_search}     //div[@class = "mx-grid-controlbar"]//button[text() = "Search"]
+${mea_indexes}     //tr[contains(@class, "mx-name-index")]
+${mea_custom_search}     //span[@class = "mx-icon-lined mx-icon-filter"]
+${apply_search_filter}     //button[text() = "Apply"]
+${reset_filters}     //button[text() = "ResetFilters"]
+${reset_filters_wait_msg}     //div[contains(text(), "Please wait while filters are being reset")]
+
+
+
+
+
+
+
+################## MEA Custom Search #######################
+${search_filter_clickable_input}     //label[contains(text(), "%s")]/parent::div/div
+${search_filter_input}     //label[contains(text(), "%s")]/parent::div/div/input
+${search_filter_dd_input}     //label[contains(text(), "%s")]/parent::div/div//input
+${search_result}     //div[text() = "%s"]
+
+
 
 
 

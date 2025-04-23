@@ -385,6 +385,68 @@ Input Search Filter "${Filter}" as Value "${Value}" from Search Page
     Press Keys    NONE    ENTER
     Capture Page Screenshot
 
+From Custom Search Filter "${Filter}" input Value "${Value}" and verify the result "${Result}"
+    [Documentation]    From Custom Search Filter "${Filter}" enter Value "${Value}" and verify the result "${Result}"
+    ...
+    ...    == Description: ==
+    ...    From Custom Search Filter "${Filter}" enter Value "${Value}" and verify the result "${Result}"
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    
+    ${locator} =   Composed Locator    ${search_filter_clickable_input}    ${Filter}
+    Scroll Element Into View    ${locator}
+    Click On Locator    ${locator}
+    Send Keys to Composed Locator    ${search_filter_input}    ${Filter}    ${Value}
+    Sleep    0.5
+    Press Keys    NONE    ENTER
+    Scroll Element Into View    ${apply_search_filter}
+    Click On Locator    ${apply_search_filter}
+    Wait until Element Is Not Visible    ${apply_search_filter}
+    Scroll To End Of Page
+    ${locator2} =   Composed Locator    ${search_result}    ${Result} 
+    Wait For Locator    ${locator2}     
+    Scroll Element Into View    ${locator2}
+    Double Click Element    ${locator2}
+    Capture Page Screenshot
+
+
+From Custom Search Filter "${Filter}" DropDown input Value "${Value}" and verify the result "${Result}"
+    [Documentation]    From Custom Search Filter "${Filter}" enter Value "${Value}" and verify the result "${Result}"
+    ...
+    ...    == Description: ==
+    ...    From Custom Search Filter "${Filter}" enter Value "${Value}" and verify the result "${Result}"
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+
+    
+    
+    ${locator} =   Composed Locator    ${search_filter_clickable_input}    ${Filter}
+    Scroll Element Into View    ${locator}
+    Click On Locator    ${locator}
+    Send Keys to Composed Locator    ${search_filter_dd_input}    ${Filter}    ${Value}
+    Sleep    0.5
+    Press Keys    NONE    ENTER
+    Scroll Element Into View    ${apply_search_filter}
+    Click On Locator    ${apply_search_filter}
+    Wait until Element Is Not Visible    ${apply_search_filter}
+    Scroll To End Of Page
+    ${locator2} =   Composed Locator    ${search_result}    ${Result} 
+    Wait For Locator    ${locator2}     
+    Scroll Element Into View    ${locator2}
+    Double Click Element    ${locator2}
+    Capture Page Screenshot
+
+
+
+
 
 Select Search Filter "${Filter}" as Value "${Value}" from Search Page
     [Documentation]    Select Search Filter as Value from Search Page
@@ -468,6 +530,26 @@ Hover over all Projects from Dashboard
     END
     Capture Page Screenshot
 
+Hover over all MEAs from MEA Dashboard Page
+    [Documentation]    Hover over all Projects from Dashboard
+    ...
+    ...    == Description: ==
+    ...    Hover over all Projects from Dashboard
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    ${Elements} =   Get WebElements    ${mea_indexes}
+    ${numbers} =   Get Length    ${Elements}
+    Convert To Integer    ${numbers}
+    FOR    ${index}    IN RANGE    ${numbers}
+        Mouse Over    ${mea_indexes}
+        Sleep    0.2
+    END
+    Capture Page Screenshot
+
+
 
 Delete a Project from Dashboard
     [Documentation]    Create a New Project from Dashboard
@@ -481,6 +563,8 @@ Delete a Project from Dashboard
     [Tags]    DONE
     
     Wait For Locator    ${del_project}
+    Mouse Over    ${del_project}
+    Sleep    1
     Click On Locator    ${del_project}
     Click On Locator    ${del_proceed}
     Wait Until Element Is Not Visible    ${del_progress_msg}
@@ -1186,7 +1270,7 @@ Browse from Google Drive
     Select Frame    ${iframe}
     Wait For Locator    ${my_drive}
     # Sleep    5
-    Sleep    2
+    Sleep    3
     Capture Page Screenshot
 
 Browse drive to Sorafuel Folder
@@ -1661,6 +1745,9 @@ Browse Drive for the Run: "${Run}"
     
 
     Wait For Composed Locator    ${fid_run_browse_drive}    ${Run}
+    ${locator} =   Composed Locator    ${fid_run_browse_drive}    ${Run}
+    Mouse Over    ${locator}
+    Sleep    1
     Click On Composed Locator    ${fid_run_browse_drive}    ${Run}
     Sleep    5
     Select Frame    ${iframe}
@@ -2466,6 +2553,50 @@ Navigate to the Edit Functionality for the MEA "${Super_ID}" from MEA Dashboard 
     Capture Page Screenshot
 
 
+Navigate to Custom Search Filter from Dashboard Page
+    [Documentation]    Navigate to Custom Search Filter from Dashboard Page
+    ...
+    ...    == Description: ==
+    ...    Navigate to Custom Search Filter from Dashboard Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Navigate to MEA Dashboard Page
+    Wait for locator    ${mea_custom_search}
+    Click On Locator    ${mea_custom_search}
+    Wait For Locator    ${apply_search_filter}
+    Capture Page Screenshot
+
+Reset and then Navigate to Custom Search Filter from MEA Dashboard Page
+    [Documentation]    Navigate to Custom Search Filter from MEA Dashboard Page
+    ...
+    ...    == Description: ==
+    ...    Navigate to Custom Search Filter from MEA Dashboard Page
+    ...
+    ...    == Author: ==
+    ...    Ahmed Mazhar
+
+    [Tags]    DONE
+    
+
+    Wait For Locator    ${reset_filters}
+    Scroll Element Into View    ${reset_filters}
+    Click On Locator    ${reset_filters}
+    Wait Until Element Is Not Visible    ${reset_filters_wait_msg}
+    Sleep    0.5
+    Wait for locator    ${mea_custom_search}
+    Click On Locator    ${mea_custom_search}
+    Wait For Locator    ${apply_search_filter}
+    Capture Page Screenshot
+
+
+
+
+
 Navigate to the View Results Functionality for the MEA "${Super_ID}" from MEA Dashboard Page
     [Documentation]    Navigate to the View Results Functionality for the MEA "${Super_ID}" from MEA Dashboard Page
     ...
@@ -2479,6 +2610,9 @@ Navigate to the View Results Functionality for the MEA "${Super_ID}" from MEA Da
     
 
     Wait For Composed Locator    ${mea_dashboard_superid}    ${Super_ID}
+    ${locator} =   Composed Locator    ${mea_dashboard_superid}    ${Super_ID}
+    Mouse Down    ${locator}
+    Sleep    1
     Click On Composed Locator    ${mea_dashboard_superid}    ${Super_ID}
     Wait For Locator    ${universal_view_results}
     Click On Locator    ${universal_view_results}

@@ -50,11 +50,11 @@ US11 Verifying Edit Functionality for Deleting and Uploading Files from Database
     # Save and Close a Process
     Access Bezzomate
     Navigate to the Category "Database" from Bezzomate
-    Verify that the readings for "DCPowerSupplyReading" are "181261"
+    Verify that the readings for "DCPowerSupplyReading" are "212934"
     Verify that the readings for "TCD" are "36"
     Verify that the readings for "FID" are "72"
     Verify that the readings for "EIS" are "1397"
-    Verify that the readings for "LSV" are "22479"
+    Verify that the readings for "LSV" are "22814"
     Unaccess Bezzomate
     Navigate to MEA Dashboard Page
     Navigate to the Edit Functionality for the MEA "P0019-E0001-M0001" from MEA Dashboard Page
@@ -65,11 +65,11 @@ US11 Verifying Edit Functionality for Deleting and Uploading Files from Database
     Refresh Feed
     Access Bezzomate
     Navigate to the Category "Database" from Bezzomate
-    Verify that the readings for "DCPowerSupplyReading" are "177948"
+    Verify that the readings for "DCPowerSupplyReading" are "209621"
     Verify that the readings for "TCD" are "35"
     Verify that the readings for "FID" are "70"
     Verify that the readings for "EIS" are "1327"
-    Verify that the readings for "LSV" are "21554"
+    Verify that the readings for "LSV" are "21889"
     Unaccess Bezzomate
     
     Navigate to MEA Dashboard Page
@@ -82,11 +82,11 @@ US11 Verifying Edit Functionality for Deleting and Uploading Files from Database
     Refresh Feed
     Access Bezzomate
     Navigate to the Category "Database" from Bezzomate
-    Verify that the readings for "DCPowerSupplyReading" are "181261"
+    Verify that the readings for "DCPowerSupplyReading" are "212934"
     Verify that the readings for "TCD" are "36"
     Verify that the readings for "FID" are "72"
     Verify that the readings for "EIS" are "1397"
-    Verify that the readings for "LSV" are "22479"
+    Verify that the readings for "LSV" are "22814"
     Unaccess Bezzomate
     
     [Teardown]    Close Browser
