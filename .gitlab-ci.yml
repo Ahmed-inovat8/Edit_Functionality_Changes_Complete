@@ -9,10 +9,12 @@ robot_test:
     - pip install selenium
     - pip install robotframework-seleniumlibrary
     - git clone https://github.com/Ahmed-inovat8/Edit_Functionality_Changes_Complete.git
-    - cd Edit_Functionality_Changes_Complete
+    - cd Inovat8-Project-database-main
     - robot SF_US1.robot
   artifacts:
     paths:
       - output.xml
       - report.html
       - log.html
+  only:
+    - main
