@@ -148,8 +148,11 @@ ${anode_additive_layer_id_dd_cross}     //div[@class = "mx-name-container41 bord
 ${anode_additive_layer_id_input}     //div[@class = "mx-name-container41 border1 spacing-outer-top-medium"]//label[text() = "ID"]/parent::div//div[@class = "widget-combobox-selected-items"]/input
 ${anode_additive_layer_id_text}     //div[@class = "widget-combobox-selected-items"]//span[text() = "None"]
 
+
+
 ################## Testing Details #######################
 ${testing_details}     //h1[text() = "Testing Details"]
+${testing_details5432}     //h1[text() = "Testing Details"]
 ${label_testing_details}     //label[text() = "%s"]
 ${anolyte_catholyte_noneditable_attributes}     //div[@class= "col-lg col-md col"]//input[@disabled]
 ${anolyte_catholyte_noneditable_captured_solution}     //div[@class= "col-lg col-md col"]//select[@disabled]
@@ -200,11 +203,8 @@ ${mea_search}     //div[@class = "mx-grid-controlbar"]//button[text() = "Search"
 ${mea_indexes}     //tr[contains(@class, "mx-name-index")]
 ${mea_custom_search}     //span[@class = "mx-icon-lined mx-icon-filter"]
 ${apply_search_filter}     //button[text() = "Apply"]
-${reset_filters}     //button[text() = "ResetFilters"]
+${reset_filters}     //button[text() = "Reset Filters"]
 ${reset_filters_wait_msg}     //div[contains(text(), "Please wait while filters are being reset")]
-
-
-
 
 
 
