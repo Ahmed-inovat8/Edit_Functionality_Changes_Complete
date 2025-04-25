@@ -37,6 +37,7 @@ US1 General Testing till the completion of the Project via Drive
     Browse Drive for the Run: "TCD Run :1"
     Select File with "7" iterations from Google Drive
     Set Time as "40" from GC File Upload
+    
     Save Changes from GC File Upload
     If error select file with "6" and "7" iterations again for DC Power Supply with Time "40"
     Navigate to PStat EIS Page from GC Files Page
