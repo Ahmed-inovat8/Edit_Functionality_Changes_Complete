@@ -16,5 +16,3 @@ robot_test:
       - output.xml
       - report.html
       - log.html
-  only:
-    - main  # ensures the pipeline runs only on the main branch
